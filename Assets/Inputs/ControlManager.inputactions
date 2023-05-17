@@ -1,0 +1,150 @@
+{
+    "name": "ControlManager",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "7d957ef5-fcf7-48e5-87a9-aa2393af686e",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "f7db0e59-81dd-4690-9bad-81b5707a4fa1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Rotation",
+                    "type": "Value",
+                    "id": "ee83c382-8010-4f13-8228-e6968da37867",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ButtonPressed",
+                    "type": "Button",
+                    "id": "341616db-b0ff-4335-a5e5-de429772938c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ButtonReleased",
+                    "type": "Button",
+                    "id": "7e62d49a-e582-4941-a78e-67665c101425",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Show UI",
+                    "type": "Button",
+                    "id": "acb11531-6311-47b8-9465-c6d41b461a65",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SelectItem",
+                    "type": "Button",
+                    "id": "2bedccc8-5387-4b71-b7ec-ceb875dc64f4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3aa483fc-bc54-4b7b-9ed9-6a0ec348cedc",
+                    "path": "<OculusTouchController>{LeftHand}/thumbstick",
+                    "interactions": "Hold(duration=0.3,pressPoint=0.3)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "49b57d93-1407-4d38-8d6f-aa8788bebf57",
+                    "path": "<OculusTouchController>{RightHand}/thumbstick",
+                    "interactions": "Press(pressPoint=0.4)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dca61388-3ec3-4ce2-b632-b21068fd3b2b",
+                    "path": "<OculusTouchController>{LeftHand}/triggerPressed",
+                    "interactions": "Press(pressPoint=0.5)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8356f151-25f6-46a7-9525-087c07af4fbc",
+                    "path": "<OculusTouchController>{RightHand}/triggerPressed",
+                    "interactions": "Press(pressPoint=0.5)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "12b08438-c76f-497b-9a10-fa468b1ed71f",
+                    "path": "<OculusTouchController>{LeftHand}/triggerPressed",
+                    "interactions": "Press(pressPoint=0.2,behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonReleased",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa371368-f301-4040-9f8f-c3f84b7c8433",
+                    "path": "<OculusTouchController>{RightHand}/triggerPressed",
+                    "interactions": "Press(pressPoint=0.2,behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonReleased",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "13ed696c-2c52-48a9-8800-5df02ba12e14",
+                    "path": "<OculusTouchController>{LeftHand}/gripPressed",
+                    "interactions": "Press(pressPoint=0.2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Show UI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "70a9cfca-8d94-4d69-9d3b-7dd21c17f002",
+                    "path": "<OculusTouchController>{LeftHand}/primaryButton",
+                    "interactions": "Press(pressPoint=0.4)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

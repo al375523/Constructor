@@ -1,0 +1,2 @@
+*.fbx filter=lfs diff=lfs merge=lfs -text
+123.data filter=lfs diff=lfs merge=lfs -text

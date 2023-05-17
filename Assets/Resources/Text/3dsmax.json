@@ -1,0 +1,139 @@
+{
+  "WaterTanks": [
+    {
+      "ID": "Water Tank",
+      "positionInCircuit": 0,
+      "Position": [
+        {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      ],
+      "Rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 270.0
+      }
+    }
+  ],
+  "Pipes": [
+    {
+      "ID": "Large Pipe",
+      "positionInCircuit": 1,
+      "Position": [
+        {
+          "x": 0.0,
+          "y": -0.3,
+          "z": 0.0
+        },
+        {
+          "x": 0.0,
+          "y": -0.6,
+          "z": 0.0
+        }
+      ],
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270.0
+      },
+      "height":0.3, 
+      "width": 0.16
+    },
+    {
+      "ID": "Large Pipe",
+      "positionInCircuit": 3,
+      "Position": [
+        {
+          "x": 0.2,
+          "y": -0.8,
+          "z": -0.1
+        },
+        {
+          "x": 0.8,
+          "y": -0.8,
+          "z": -0.2
+        }
+      ],
+      "Rotation": {
+        "x": 0.0,
+        "y": 190.0,
+        "z": 0.0
+      },
+      "height":0.16,
+      "width": 0.65
+    },
+    {
+      "ID": "Large Pipe",
+      "positionInCircuit": 6,
+      "Position": [
+        {
+          "x": 1.0,
+          "y": -1.2,
+          "z": 0.0
+        },
+        {
+          "x": 1.0,
+          "y": -1.2,
+          "z": 1.7
+        }   
+        
+      ],
+      "Rotation": {
+        "x": 0.0,
+        "y": 90.0,
+        "z": 0.0
+      },
+      "height":0.16,
+      "width": 0.165
+    }
+ 
+  ],
+  "Elbows": [
+    {
+      "ID": "Elbow",
+      "positionInCircuit": 2,
+      "Position": [{
+        "x": 0.06616025,
+        "y": -0.6809261,
+        "z":-0.02308669
+      }],
+      "Rotation": {
+        "x": 6.830189e-06,
+        "y": 195,
+        "z": 270
+      }
+    },
+    {
+      "ID": "Elbow",
+      "positionInCircuit": 4,
+      "Position": [{
+        "x": 0.934866,
+        "y": -0.8571263,
+        "z": -0.2217922
+      }],
+      "Rotation": {
+        "x": -4.151391e-06,
+        "y": 12.50968,
+        "z": 3.787654e-05
+      }
+    },
+    {
+      "ID": "Elbow",
+      "positionInCircuit": 5,
+      "Position": [{
+        "x": 1.027,
+        "y": -1.128,
+        "z": -0.1431003
+      }],
+      "Rotation": {
+        "x": 2.390566e-05,
+        "y": 90.0,
+        "z": 270.0
+      }
+    }
+  ]
+}
+
+  
