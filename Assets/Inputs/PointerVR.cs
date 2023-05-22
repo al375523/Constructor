@@ -28,6 +28,7 @@ public class PointerVR : MonoBehaviour
 
     public GameObject itemBeingHighlighted;
     public GameObject lastItemHighlighted=null;
+    public GameObject buttonChangedColor;
     [SerializeField] private CircuitManager circuitManager;
     [HideInInspector] public bool beingHit;
     public Color colorHighlight;  
@@ -39,7 +40,12 @@ public class PointerVR : MonoBehaviour
     OculusInputs oculusInput;
     GestureDetector[] gesture;
     PhotonView pv;
-    
+
+    private bool hitButton = false;
+    private bool isChanged = false;
+    Color initialColor;
+    Color changedColor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,7 +100,24 @@ public class PointerVR : MonoBehaviour
                 itemBeingHighlighted = null;
                 lastItemHighlighted = null;
             }
-        }               
+        }
+
+        //Change color buttons
+        if (hitButton)
+        {
+            if(buttonChangedColor != null)
+            {
+                buttonChangedColor.GetComponent<Image>().color = changedColor;
+            }
+        }
+        else
+        {
+            if (buttonChangedColor != null)
+            {
+                buttonChangedColor.GetComponent<Image>().color = initialColor;
+                isChanged = false;
+            }
+        }
     }
     void DeselectItem()
     {
@@ -168,6 +191,21 @@ public class PointerVR : MonoBehaviour
             {
                 itemBeingHighlighted = null;
             }
+
+            //Change color panel
+            if (hit.collider.transform.parent.GetComponent<ButtonListener>() != null)
+            {
+                if (!isChanged)
+                {
+                    isChanged = true;
+                    hitButton = true;
+                    buttonChangedColor = hit.collider.transform.parent.parent.gameObject;
+                    initialColor = buttonChangedColor.GetComponent<Image>().color;
+                    changedColor = initialColor + new Color(0f, 0.1f, 0f);
+                }
+            }
+            else hitButton = false;
+                
         }
         else 
         {
