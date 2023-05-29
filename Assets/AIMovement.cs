@@ -26,11 +26,14 @@ public class AIMovement : MonoBehaviour
     {
         dist = navMeshAgent.remainingDistance;        
         if (dist != Mathf.Infinity && navMeshAgent.pathStatus == NavMeshPathStatus.PathComplete && navMeshAgent.remainingDistance == 0)
-        {          
+        {
+            
+            
             if (!waiting)
             {
                 waiting = true;                    
                 StartCoroutine(WaitCooldown());
+                
             }                                                      
         }
     }
@@ -52,16 +55,16 @@ public class AIMovement : MonoBehaviour
             navMeshAgent.destination = agentPath[actualIndex].position;
             actualIndex++;
             if (actualIndex >= agentPath.Count) actualIndex = 0;
+            
         }       
     }
 
     IEnumerator WaitCooldown()
     {
-        //yield return new WaitUntil(()=> currentTime==animator.GetCurrentAnimatorStateInfo(0).length);
         animator.enabled = false;
         yield return new WaitForSeconds(waitingTime);
         waiting = false;
-        animator.enabled = true;      
+        animator.enabled = true;
         NextDestination();       
     }
 }
