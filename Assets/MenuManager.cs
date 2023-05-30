@@ -26,6 +26,8 @@ public class MenuManager : MonoBehaviour
     public TMP_Text infoText;
     GameObject player;
     NetworkManager networkManager;
+
+    
     
 
     // Start is called before the first frame update
@@ -56,7 +58,8 @@ public class MenuManager : MonoBehaviour
         }
         if (isSubmenu)
         {            
-            ShowButtons();                       
+            ShowButtons();
+           
         }
     }
 

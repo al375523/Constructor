@@ -184,6 +184,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6950093815487434588, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6950093815494055905, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6950093815571284909, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
@@ -200,6 +208,10 @@ PrefabInstance:
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6950093815831135779, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6950093816633301616, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: m_Name
       value: Submenu
@@ -208,6 +220,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6950093816633301617, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: menuScene
+      value: Scene_Menus_VR
+      objectReference: {fileID: 0}
+    - target: {fileID: 6950093816633301617, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: materialMenu
+      value: 
+      objectReference: {fileID: 2100000, guid: 1de6d3da889d4e944926c47b281fd664, type: 2}
+    - target: {fileID: 6950093816633301617, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: materialSubmenu
+      value: 
+      objectReference: {fileID: 2100000, guid: d212515ce0b954df7b7df72ec9e5dc41, type: 2}
     - target: {fileID: 6950093816633301629, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -296,6 +320,10 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6950093817087083409, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
 --- !u!1 &309676405 stripped
@@ -314,6 +342,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3151d615811210448399ee01129d368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &309676411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309676405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce4241e7d17d274494cc8d2ca00c60e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuScene: Scene_Menus_VR
+  materialMenu: {fileID: 2100000, guid: 1de6d3da889d4e944926c47b281fd664, type: 2}
+  materialSubmenu: {fileID: 2100000, guid: d212515ce0b954df7b7df72ec9e5dc41, type: 2}
 --- !u!1 &338554004
 GameObject:
   m_ObjectHideFlags: 0
