@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PointerVR : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class PointerVR : MonoBehaviour
 
     private bool hitButton = false;
     private bool isChanged = false;
+    private bool menuActive = false;
     Color initialColor;
     Color changedColor;
 
@@ -69,6 +71,17 @@ public class PointerVR : MonoBehaviour
         if (LeftHandTrack.GetComponent<OVRHand>().IsDataValid || RightHandTrack.GetComponent<OVRHand>().IsDataValid)
             direction = transformOrigin.right;            
         origin = transformOrigin.position;
+
+        if (SceneManager.GetSceneByName("Scene_Menus_VR").isLoaded)
+        {
+            menuActive = true;
+        }
+        if (!SceneManager.GetSceneByName("Scene_Menus_VR").isLoaded && menuActive)
+        {
+            menuActive = false;
+            hitButton = false;
+            isChanged = false;
+        }
 
         DoRaycast();
         if (beingHit)
@@ -105,7 +118,7 @@ public class PointerVR : MonoBehaviour
         //Change color buttons
         if (hitButton)
         {
-            if(buttonChangedColor != null)
+            if (buttonChangedColor != null)
             {
                 buttonChangedColor.GetComponent<Image>().color = changedColor;
             }
@@ -205,10 +218,12 @@ public class PointerVR : MonoBehaviour
                 }
             }
             else hitButton = false;
+            
                 
         }
         else 
         {
+            hitButton = false;
             beingHit = false;
             marker.SetActive(false);
             lineRenderer.material = falseColor;
