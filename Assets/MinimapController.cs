@@ -99,6 +99,7 @@ public class MinimapController : MonoBehaviour
         {
             pv.RPC("ChangeSection", RpcTarget.AllBuffered, name);
         }
+        
     }
 
     public void PointerHitted(GameObject pointer)

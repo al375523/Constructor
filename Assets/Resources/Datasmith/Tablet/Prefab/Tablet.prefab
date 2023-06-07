@@ -927,6 +927,7 @@ MonoBehaviour:
   textMovement: {fileID: 3228079512748282748}
   rightController: {fileID: 0}
   currentType: {fileID: 811226380609037294}
+  type: 0
 --- !u!114 &1808020587369092140
 MonoBehaviour:
   m_ObjectHideFlags: 0

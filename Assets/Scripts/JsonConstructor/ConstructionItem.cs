@@ -24,8 +24,8 @@ public class ConstructionItem : MonoBehaviour
 
     internal void ShowHideGo()
     {
-        isVisible = !isVisible;
-        gameObject.SetActive(isVisible);             
+        //isVisible = !isVisible;
+        gameObject.SetActive(false);             
     }
 
     public void SetChildren(GameObject go)

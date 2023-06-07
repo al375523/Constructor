@@ -12,15 +12,16 @@ public class TabletButtons : MonoBehaviour
     public TMP_Text textMovement;
     public Transform rightController;
     public TMP_Text currentType;
+    public ConstructionType type;
 
     OculusInputs controller;
     ConstructionPanel constructionPanel=null;    
-    ConstructionType type;
     ProjectManagerDemo projectManager;
     string sceneName;
     GameObject tabletUbication;
     PhotonView pv;
-    // Start is called before the first frame update
+    static bool hide = false;
+
     void Start()
     {
         controller = GameObject.FindGameObjectWithTag("Player").GetComponent<OculusInputs>();
@@ -37,12 +38,14 @@ public class TabletButtons : MonoBehaviour
     }
     void Update()
     {        
-        transform.position = tabletUbication.transform.position;               
+        transform.position = tabletUbication.transform.position;
     }
     
     void LoadingSection()
     {
         constructionPanel = FindObjectOfType<ConstructionPanel>();
+        hide = !hide;
+        ShowHide();
     }
 
     IEnumerator WaitArtScene()
@@ -55,13 +58,22 @@ public class TabletButtons : MonoBehaviour
     
     public void ShowHide()
     {
-        if(constructionPanel!=null)
+        if (!hide)
+        {
             constructionPanel.ShowHideAllItemsOfType(type);
+            hide = true;
+        }
+        else
+        {
+            constructionPanel.ShowAllItems();
+            hide = false;
+        }      
     }
   
     public void ChangeType(int t)
     {        
         string sType="";
+        if(hide) ShowHide();
         switch (t)
         {
             case 0:

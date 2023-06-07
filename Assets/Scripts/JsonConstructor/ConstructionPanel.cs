@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class ConstructionPanel : MonoBehaviour
 {
     public ConstructionItem[] constructionItems;
+    public bool[] auxItems;
     ProjectManagerDemo projectManagerDemo;
     string actualSection;
+  
     private void Awake()
     {
         projectManagerDemo = FindObjectOfType<ProjectManagerDemo>();
@@ -31,8 +33,30 @@ public class ConstructionPanel : MonoBehaviour
         }
     }
 
-    void LoadingSection()
+    public void LoadingSection()
     {
+
+        auxItems = new bool[transform.childCount];
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).gameObject.activeSelf)
+                auxItems[i] = true;
+            else auxItems[i] = false;
+        }
+            
+
+        for (int i = 0; i < transform.childCount; i++)
+            transform.GetChild(i).gameObject.SetActive(true);
+
         constructionItems = FindObjectsOfType(typeof(ConstructionItem)) as ConstructionItem[];
-    }    
+        for (int i = 0; i < auxItems.Length; i++)
+            if (!auxItems[i])
+                transform.GetChild(i).gameObject.SetActive(false);
+    }   
+    
+    public void ShowAllItems()
+    {
+        foreach (var item in constructionItems)
+            item.gameObject.SetActive(true);
+    }
 }
