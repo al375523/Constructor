@@ -137,25 +137,7 @@ public class PointerVR : MonoBehaviour
         circuitManager.SelectItem(null);       
     }
 
-    public void SelectItem()
-    {             
-        if (itemBeingHighlighted != null)
-        {
-            if (itemBeingHighlighted.GetComponent<CircuitItem>() != circuitManager.circuit.itemCircuitSelected)
-            {
-                pv.RPC("SelectItemPun", RpcTarget.All, null);
-                /*if(circuitManager.circuit.itemCircuitSelected!=null)
-                    DeselectItem();
-                circuitManager.GetComponent<PhotonView>().RPC("SelectItem", RpcTarget.All, itemBeingHighlighted.GetComponent<CircuitItem>());
-                GameObject.Find("EventManagerObj").GetComponent<ButtonsEvents>().ButtonEvent("Edit");*/
-            }
-            else
-            {
-                Debug.Log("Deseleccionar");
-                DeselectItem();
-            }
-        }        
-    }
+    
 
     [PunRPC]
     void SelectItemPun()

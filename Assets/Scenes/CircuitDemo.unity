@@ -218,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6950093816633301616, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6950093816633301617, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: menuScene
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309676405}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ce4241e7d17d274494cc8d2ca00c60e, type: 3}
   m_Name: 
@@ -3317,6 +3317,21 @@ MonoBehaviour:
   RotationAngle: 45
   Speed: 0
   CameraRig: {fileID: 1101194011}
+--- !u!114 &1101194032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101194009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce4241e7d17d274494cc8d2ca00c60e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuScene: Scene_Menus_VR
+  materialMenu: {fileID: 2100000, guid: 1de6d3da889d4e944926c47b281fd664, type: 2}
+  materialSubmenu: {fileID: 2100000, guid: d212515ce0b954df7b7df72ec9e5dc41, type: 2}
 --- !u!1 &1283008264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7903962781519451168, guid: ec6ba588e5c158d4eb02b29a5bba1dda, type: 3}

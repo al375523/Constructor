@@ -188,7 +188,7 @@ public class OculusInputs : MonoBehaviour
         if (selectButton && !holdingSelected)
         {
             holdingSelected = true;
-            pointer.SelectItem();
+            
         }
         else
         {
