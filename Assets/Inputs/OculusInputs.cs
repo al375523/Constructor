@@ -31,15 +31,12 @@ public class OculusInputs : MonoBehaviour
     public GameObject teleportObject;
 
     PointerVR pointer;
-    float leftAxisHand; 
     float leftAxisIndex;
-    float rightAxisHand;
     float speed = 2f;
-    bool selectButton; 
+    bool selectButton;
+    bool menuButton;
     bool isPressed;
     bool holding;
-    bool holdingSelected;
-    bool holdingMinimap;
     bool rotate;
 
     MenuManager submenuManager;
@@ -75,8 +72,6 @@ public class OculusInputs : MonoBehaviour
     void Start()
     {        
         isPressed = false;
-        holdingSelected = false;
-        holdingMinimap = false;
         rotate = true;
         mainCamera = Camera.main.gameObject;
         cameraParent = mainCamera.transform.parent.parent.gameObject;
@@ -107,8 +102,7 @@ public class OculusInputs : MonoBehaviour
         if (CurrentInputState == InputStates.Active)
         {
             selectButton = GetDown(Button.One, leftController);
-            leftAxisHand = Get(Axis1D.PrimaryHandTrigger, leftController);
-            rightAxisHand = Get(Axis1D.PrimaryHandTrigger, rightController);
+            menuButton = GetDown(Button.Start, leftController);
             joystickR = Get(Axis2D.PrimaryThumbstick, rightController);
             joystickL = Get(Axis2D.PrimaryThumbstick, leftController);
             leftAxisIndex = Get(Axis1D.PrimaryIndexTrigger, leftController);
@@ -120,8 +114,7 @@ public class OculusInputs : MonoBehaviour
         else if(CurrentInputState == InputStates.Inactive)
         {
             selectButton = false;
-            leftAxisHand = 0;
-            rightAxisHand = 0;
+            menuButton = false;
             joystickL = Vector2.zero;
             joystickR = Vector2.zero;
             leftAxisIndex = 0;
@@ -135,7 +128,8 @@ public class OculusInputs : MonoBehaviour
             joystickL = Vector2.zero;
             joystickR = Vector2.zero;
             teleportObject.SetActive(false);
-            selectButton = false;
+            selectButton = GetDown(Button.One, leftController);
+            menuButton = false;
             pointer.enabled = true;
             pointerRender.enabled = true;
             leftAxisIndex = Get(Axis1D.PrimaryIndexTrigger, leftController);
@@ -143,15 +137,14 @@ public class OculusInputs : MonoBehaviour
         }
         else if(CurrentInputState == InputStates.MinimapSubmenu)
         {
-            rightAxisHand = Get(Axis1D.PrimaryHandTrigger, rightController);
-            leftAxisHand = Get(Axis1D.PrimaryHandTrigger, leftController);
             leftAxisIndex = Get(Axis1D.PrimaryIndexTrigger, leftController);
+            menuButton = GetDown(Button.Start, leftController); ;
             pointer.enabled = true;
             pointerRender.enabled = true;
             joystickL = Vector2.zero;
             joystickR = Vector2.zero;
             teleportObject.SetActive(false);
-            selectButton = false;
+            selectButton = GetDown(Button.One, leftController);
             if (tabletPrefab != null) tabletPrefab.SetActive(false);
         }
     }
@@ -184,30 +177,21 @@ public class OculusInputs : MonoBehaviour
     void ButtonsFuncionalities()
     {            
     //Update
-       //Select A Button
-        if (selectButton && !holdingSelected)
-        {
-            holdingSelected = true;
-            
-        }
-        else
-        {
-            holdingSelected = false;
-        }
 
-       //Show Submenu
-        if (leftAxisHand > 0 && !minimapPrefab.activeSelf && !isPressed)
+        //Show Submenu
+        if (menuButton && !minimapPrefab.activeSelf && !isPressed)
         {
             ShowHideUI();
             isPressed = true;
         }
-        else if(leftAxisHand == 0)
+        else if (!menuButton)
         {
             isPressed = false;
         }
 
-       //Pointer select
-        if (leftAxisIndex > 0 && !holding)
+
+        //Pointer select
+        if (leftAxisIndex > 0 || selectButton && !holding)
         {
             pointer.ButtonPressed();
             holding = true;
@@ -218,8 +202,8 @@ public class OculusInputs : MonoBehaviour
             holding = false;
         }
 
-       //Minimap
-        if (rightAxisHand > 0 && !holdingMinimap && !uiToShow.activeSelf)
+        //Minimap
+        /*if (rightAxisHand > 0 && !holdingMinimap && !uiToShow.activeSelf)
         {
             OpenCloseMinimap();
             holdingMinimap = true;
@@ -227,7 +211,7 @@ public class OculusInputs : MonoBehaviour
         else if(rightAxisHand == 0)
         {
             holdingMinimap = false;
-        }
+        }*/
     }
 
 
