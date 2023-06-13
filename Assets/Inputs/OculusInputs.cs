@@ -255,7 +255,7 @@ public class OculusInputs : MonoBehaviour
         }
     }
 
-    void ShowHideUI()
+    public void ShowHideUI()
     {                           
         if (!uiToShow.activeSelf)
         {
