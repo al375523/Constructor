@@ -175,11 +175,11 @@ public class OculusInputs : MonoBehaviour
     }
 
     void ButtonsFuncionalities()
-    {            
-    //Update
+    {
+        //Update
 
         //Show Submenu
-        if (menuButton && !minimapPrefab.activeSelf && !isPressed)
+        if (menuButton && !isPressed)
         {
             ShowHideUI();
             isPressed = true;
@@ -187,6 +187,13 @@ public class OculusInputs : MonoBehaviour
         else if (!menuButton)
         {
             isPressed = false;
+        }
+
+        //Close Minimap
+        if (minimapPrefab.activeSelf && menuButton)
+        {
+            Debug.Log("INTENTA CERRARSE");
+            OpenCloseMinimap();
         }
 
 
