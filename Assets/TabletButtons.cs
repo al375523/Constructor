@@ -13,6 +13,7 @@ public class TabletButtons : MonoBehaviour
     public Transform rightController;
     public TMP_Text currentType;
     public ConstructionType type;
+    ConstructionType antType;
 
     OculusInputs controller;
     ConstructionPanel constructionPanel=null;    
@@ -71,9 +72,9 @@ public class TabletButtons : MonoBehaviour
     }
   
     public void ChangeType(int t)
-    {        
+    {
+        antType = type;
         string sType="";
-        if(hide) ShowHide();
         switch (t)
         {
             case 0:
@@ -104,6 +105,11 @@ public class TabletButtons : MonoBehaviour
                 type = ConstructionType.Decoration;
                 sType = "Decoration";
                 break;
+        }
+        if(antType != type)
+        {
+            constructionPanel.ShowAllItems();
+            hide = false;
         }
         currentType.text = sType;
         ChangePanel("");
