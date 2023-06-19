@@ -22,7 +22,7 @@ public class ConstructionPanel : MonoBehaviour
             constructionItems = FindObjectsOfType(typeof(ConstructionItem)) as ConstructionItem[];
     }
 
-    public void ShowHideAllItemsOfType(ConstructionType curType)
+    public void HideAllItemsOfType(ConstructionType curType)
     {
         foreach (var item in constructionItems)
         {

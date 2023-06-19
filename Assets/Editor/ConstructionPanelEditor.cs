@@ -17,7 +17,7 @@ public class ConstructionPanelEditor : Editor
         selectedType = (ConstructionType)EditorGUILayout.EnumPopup(selectedType);
         if (GUILayout.Button("Show/Hide Items"))
         {
-            c.ShowHideAllItemsOfType(selectedType);
+            c.HideAllItemsOfType(selectedType);
         }
 
     }

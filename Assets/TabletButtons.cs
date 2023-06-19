@@ -9,11 +9,14 @@ using Photon.Realtime;
 public class TabletButtons : MonoBehaviour
 {        
     public List<GameObject> PanelList;
+    public List<GameObject> TypeHideList;
     public TMP_Text textMovement;
     public Transform rightController;
     public TMP_Text currentType;
     public ConstructionType type;
     ConstructionType antType;
+    int typeInt;
+    int typeIntAnt;
 
     OculusInputs controller;
     ConstructionPanel constructionPanel=null;    
@@ -33,6 +36,7 @@ public class TabletButtons : MonoBehaviour
         sceneName = projectManager.sceneName;
         StartCoroutine(WaitArtScene());
         type = ConstructionType.Others;
+        typeInt = 0;
         currentType.text="Others";
         textMovement.text = "Fly";
         EventManager.StartListening("LOADING_SECTION", LoadingSection);
@@ -61,20 +65,24 @@ public class TabletButtons : MonoBehaviour
     {
         if (!hide)
         {
-            constructionPanel.ShowHideAllItemsOfType(type);
+            constructionPanel.HideAllItemsOfType(type);
             hide = true;
+            TypeHideList[typeInt].SetActive(true);
         }
         else
         {
             constructionPanel.ShowAllItems();
             hide = false;
+            TypeHideList[typeInt].SetActive(false);
         }      
     }
   
     public void ChangeType(int t)
     {
         antType = type;
+        typeIntAnt = typeInt;
         string sType="";
+        
         switch (t)
         {
             case 0:
@@ -106,14 +114,17 @@ public class TabletButtons : MonoBehaviour
                 sType = "Decoration";
                 break;
         }
-        if(antType != type)
+        typeInt = t;
+        if (antType != type)
         {
             constructionPanel.ShowAllItems();
             hide = false;
+            TypeHideList[typeIntAnt].SetActive(false);
         }
+        
         currentType.text = sType;
-        ChangePanel("");
-        StartCoroutine(WaitPanel("MainPanel"));
+        //ChangePanel("");
+        //StartCoroutine(WaitPanel("MainPanel"));
     }
 
     
@@ -152,5 +163,5 @@ public class TabletButtons : MonoBehaviour
             controller.ResetPositionY();
             controller.ChangeMovementState(0);
         }
-    }    
+    }
 }
