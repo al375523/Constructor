@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.377
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 338554006}
-  m_IndirectSpecularColor: {r: 0.058847204, g: 0.19212553, b: 0.3861909, a: 0.377}
+  m_IndirectSpecularColor: {r: 0.058143277, g: 0.19071148, b: 0.38364857, a: 0.377}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -250,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d212515ce0b954df7b7df72ec9e5dc41, type: 2}
     - target: {fileID: 6950093816633301617, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: panels.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6950093816633301617, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: panels.Array.data[7]
@@ -361,6 +361,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8129081427673248577, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129081427673248577, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129081427673248577, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 3
       objectReference: {fileID: 0}
@@ -373,6 +381,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 309676406}
     - target: {fileID: 8129081427673248577, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129081427673248577, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenCloseMinimap
       objectReference: {fileID: 0}
@@ -381,12 +393,20 @@ PrefabInstance:
       value: ChangePanel
       objectReference: {fileID: 0}
     - target: {fileID: 8129081427673248577, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OculusInputs, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129081427673248577, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: MenuManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8129081427673248577, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 7
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129081427673248577, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7834363335516538229, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
