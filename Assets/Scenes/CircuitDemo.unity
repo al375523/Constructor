@@ -252,6 +252,22 @@ PrefabInstance:
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6950093816572888478, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6950093816572888478, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1101194013}
+    - target: {fileID: 6950093816572888478, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowHideUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6950093816572888478, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OculusInputs, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6950093816633301616, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: m_Name
       value: Submenu
@@ -274,8 +290,16 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d212515ce0b954df7b7df72ec9e5dc41, type: 2}
     - target: {fileID: 6950093816633301617, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: panels.Array.size
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6950093816633301617, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: panels.Array.data[4]
+      value: 
+      objectReference: {fileID: 309676407}
+    - target: {fileID: 6950093816633301617, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: panels.Array.data[5]
+      value: 
+      objectReference: {fileID: 527357798}
     - target: {fileID: 6950093816633301617, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: panels.Array.data[7]
       value: 
@@ -376,6 +400,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6950093817405826678, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: m_Name
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 6950093817405826678, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7117428777115277851, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -451,6 +483,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3151d615811210448399ee01129d368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &309676407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6569712694499878350, guid: 28375d7ee1f144b2fbb75af0c5f9a6d7, type: 3}
+  m_PrefabInstance: {fileID: 309676404}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &338554004
 GameObject:
   m_ObjectHideFlags: 0
