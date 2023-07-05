@@ -84,6 +84,8 @@ GameObject:
   m_Component:
   - component: {fileID: 406146}
   - component: {fileID: 20513420}
+  - component: {fileID: -848405332353055555}
+  - component: {fileID: -2961524019609785429}
   m_Layer: 0
   m_Name: PF Jatoba LOD Group URP
   m_TagString: Untagged
@@ -141,6 +143,33 @@ LODGroup:
     renderers:
     - renderer: {fileID: 22752544}
   m_Enabled: 1
+--- !u!114 &-848405332353055555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897a09e95f3c16049a601ce6e13e5caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WindMultiplier: 1
+--- !u!182 &-2961524019609785429
+WindZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138394}
+  m_Enabled: 1
+  m_Mode: 0
+  m_Radius: 20
+  m_WindMain: 1
+  m_WindTurbulence: 1
+  m_WindPulseMagnitude: 0.5
+  m_WindPulseFrequency: 0.01
 --- !u!1 &168508
 GameObject:
   m_ObjectHideFlags: 0
