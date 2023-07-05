@@ -4942,42 +4942,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2015202716489151251, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015202716489151251, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015202716489151251, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015202716489151251, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Component, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015202716494301015, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015202716997407776, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: actualPanel
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015202716997407776, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: panels.Array.data[1]
-      value: 
-      objectReference: {fileID: 635498770}
-    - target: {fileID: 2015202716997407776, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: panels.Array.data[2]
-      value: 
-      objectReference: {fileID: 635498769}
-    - target: {fileID: 2015202716997407776, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: panels.Array.data[3]
-      value: 
-      objectReference: {fileID: 635498768}
     - target: {fileID: 2015202716997407777, guid: 164187d0148ad4cac983444703a8027e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5066,90 +5030,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 2015202717800330395, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015202717836910618, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015202717930662584, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015202718079184494, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015202718193044064, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410042557379648995, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4820189098007198083, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 635498772}
-    - target: {fileID: 4820189098007198083, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 4820189098007198083, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5181819539107791423, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 635498772}
-    - target: {fileID: 5181819539107791423, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5181819539107791423, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779244932253558413, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 635498772}
-    - target: {fileID: 8779244932253558413, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-      propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangePanel
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 164187d0148ad4cac983444703a8027e, type: 3}
---- !u!1 &635498768 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3410042557379648995, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-  m_PrefabInstance: {fileID: 635498767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &635498769 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7223317959075932461, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-  m_PrefabInstance: {fileID: 635498767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &635498770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4584253833727999095, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-  m_PrefabInstance: {fileID: 635498767}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &635498772 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2015202716997407776, guid: 164187d0148ad4cac983444703a8027e, type: 3}
-  m_PrefabInstance: {fileID: 635498767}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3151d615811210448399ee01129d368, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1295694127
 GameObject:
   m_ObjectHideFlags: 0
