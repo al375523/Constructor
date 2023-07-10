@@ -14,9 +14,7 @@ public class TabletButtons : MonoBehaviour
     public Transform rightController;
     public TMP_Text currentType;
     public ConstructionType type;
-    ConstructionType antType;
     int typeInt;
-    int typeIntAnt;
 
     OculusInputs controller;
     ConstructionPanel constructionPanel=null;    
@@ -26,8 +24,11 @@ public class TabletButtons : MonoBehaviour
     PhotonView pv;
     static bool hide = false;
 
+    List<bool> hiddenObjects;
+
     void Start()
     {
+        hiddenObjects = new List<bool>(new bool[TypeHideList.Count]);
         controller = GameObject.FindGameObjectWithTag("Player").GetComponent<OculusInputs>();
         rightController = GameObject.FindGameObjectWithTag("RightHand").transform;
         tabletUbication = GameObject.FindGameObjectWithTag("TabletUbication");
@@ -50,7 +51,16 @@ public class TabletButtons : MonoBehaviour
     {
         constructionPanel = FindObjectOfType<ConstructionPanel>();
         hide = !hide;
-        ShowHide();
+        for (int i = 0; i < hiddenObjects.Count; i++)
+            if (hiddenObjects[i])
+            {
+                TypeHideList[i].SetActive(true);
+                typeInt = i;
+                ChangeType(i);
+                constructionPanel.HideAllItemsOfType(type);
+            }
+                
+ 
     }
 
     IEnumerator WaitArtScene()
@@ -63,24 +73,24 @@ public class TabletButtons : MonoBehaviour
     
     public void ShowHide()
     {
-        if (!hide)
+        if (!TypeHideList[typeInt].activeSelf)
         {
+            Debug.Log("ENTRA");
+            hiddenObjects[typeInt] = true;
             constructionPanel.HideAllItemsOfType(type);
-            hide = true;
             TypeHideList[typeInt].SetActive(true);
         }
         else
         {
-            constructionPanel.ShowAllItems();
-            hide = false;
+            Debug.Log("NO ENTRA");
+            hiddenObjects[typeInt] = false;
+            constructionPanel.HideAllItemsOfType(type);
             TypeHideList[typeInt].SetActive(false);
-        }      
+        }
     }
   
     public void ChangeType(int t)
     {
-        antType = type;
-        typeIntAnt = typeInt;
         string sType="";
         
         switch (t)
@@ -115,16 +125,7 @@ public class TabletButtons : MonoBehaviour
                 break;
         }
         typeInt = t;
-        if (antType != type)
-        {
-            constructionPanel.ShowAllItems();
-            hide = false;
-            TypeHideList[typeIntAnt].SetActive(false);
-        }
-        
         currentType.text = sType;
-        //ChangePanel("");
-        //StartCoroutine(WaitPanel("MainPanel"));
     }
 
     
