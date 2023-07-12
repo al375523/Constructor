@@ -125,11 +125,10 @@ public class PointerVR : MonoBehaviour
         }
         else
         {
-            if (buttonChangedColor != null)
-            {
+            
                 buttonChangedColor.GetComponent<Image>().color = initialColor;
                 isChanged = false;
-            }
+            
         }
     }
     void DeselectItem()
@@ -196,7 +195,7 @@ public class PointerVR : MonoBehaviour
                     hitButton = true;
                     buttonChangedColor = hit.collider.transform.parent.parent.gameObject;
                     initialColor = buttonChangedColor.GetComponent<Image>().color;
-                    changedColor = initialColor + new Color(0f, 0.1f, 0f);
+                    changedColor = initialColor - new Color(0.2f, 0.2f, 0.2f, 0f);
                 }
             }
             else hitButton = false;
