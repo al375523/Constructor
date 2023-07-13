@@ -12,7 +12,8 @@ public class ButtonColor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {       
-        originalColor = image.color;
+        if(image!=null)
+            originalColor = image.color;
     }
 
     // Update is called once per frame

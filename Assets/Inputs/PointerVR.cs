@@ -125,10 +125,11 @@ public class PointerVR : MonoBehaviour
         }
         else
         {
-            
+            if (buttonChangedColor != null)
+            {
                 buttonChangedColor.GetComponent<Image>().color = initialColor;
-                isChanged = false;
-            
+            }
+            isChanged = false;  
         }
     }
     void DeselectItem()
