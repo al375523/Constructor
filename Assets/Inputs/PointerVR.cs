@@ -68,8 +68,8 @@ public class PointerVR : MonoBehaviour
     void Update()
     {               
         direction = transformOrigin.forward;
-        if (LeftHandTrack.GetComponent<OVRHand>().IsDataValid || RightHandTrack.GetComponent<OVRHand>().IsDataValid)
-            direction = transformOrigin.right;            
+        //if (LeftHandTrack.GetComponent<OVRHand>().IsDataValid || RightHandTrack.GetComponent<OVRHand>().IsDataValid)
+            //direction = transformOrigin.right;            
         origin = transformOrigin.position;
 
         if (SceneManager.GetSceneByName("Scene_Menus_VR").isLoaded)
