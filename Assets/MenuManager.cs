@@ -25,7 +25,7 @@ public class MenuManager : MonoBehaviour
     public GameObject panelText;
     public TMP_Text infoText;
     GameObject player;
-    NetworkManager networkManager;
+    //NetworkManager networkManager;
 
     
     
@@ -38,7 +38,7 @@ public class MenuManager : MonoBehaviour
         initialRotation = Quaternion.identity;
         player = GameObject.FindGameObjectWithTag("Player");       
         addedHeight = 0;
-        if (isSubmenu) networkManager = GameObject.FindGameObjectWithTag("Network").GetComponent<NetworkManager>();
+        //if (isSubmenu) networkManager = GameObject.FindGameObjectWithTag("Network").GetComponent<NetworkManager>();
         StartCoroutine(WaitSeconds());
     }
     
@@ -117,7 +117,7 @@ public class MenuManager : MonoBehaviour
     {
         try 
         { 
-            networkManager.ConnectToRoom(); 
+            //networkManager.ConnectToRoom(); 
         }
         catch(Exception e)
         {           
@@ -130,7 +130,7 @@ public class MenuManager : MonoBehaviour
     {         
         try
         {
-            networkManager.JoinRoom();
+            //networkManager.JoinRoom();
         }
         catch (Exception e)
         {
@@ -143,7 +143,7 @@ public class MenuManager : MonoBehaviour
     {        
         try
         {
-            networkManager.DisconnectFromMaster();
+            //networkManager.DisconnectFromMaster();
         }
         catch (Exception e)
         {
@@ -156,7 +156,7 @@ public class MenuManager : MonoBehaviour
     {       
         try
         {
-            networkManager.LeaveRoom();
+            //networkManager.LeaveRoom();
         }
         catch (Exception e)
         {
@@ -169,7 +169,7 @@ public class MenuManager : MonoBehaviour
     {        
         try
         {
-            networkManager.ConnectToMaster();
+            //networkManager.ConnectToMaster();
         }
         catch (Exception e)
         {
@@ -190,7 +190,7 @@ public class MenuManager : MonoBehaviour
         }
 
         //yield return new WaitForSeconds(2f);
-        if (networkManager.CurrentNetworkState == NetworkManager.NetworkStates.Disconnected)
+        /*if (networkManager.CurrentNetworkState == NetworkManager.NetworkStates.Disconnected)
         {
             multiplayerButtons[3].SetActive(true);
             multiplayerText.text = "Connect to Server:";
@@ -207,7 +207,7 @@ public class MenuManager : MonoBehaviour
             multiplayerButtons[2].SetActive(true);
             multiplayerButtons[4].SetActive(true);
             multiplayerText.text = "Room Options:";
-        }
+        }*/
     }
     #endregion
 

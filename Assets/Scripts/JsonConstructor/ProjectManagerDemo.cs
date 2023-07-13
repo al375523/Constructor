@@ -23,13 +23,13 @@ public class ProjectManagerDemo : MonoBehaviour
     ButtonListener startButton;
     OculusInputs oculusInputs;
     MenuManager submenuManager;
-    NetworkManager networkManager;
+    //NetworkManager networkManager;
     //FadeScreen fader;
     PlayerManager playerManager;
     void Awake()
     {
-        networkManager = GameObject.FindGameObjectWithTag("Network").GetComponent<NetworkManager>();
-        networkManager.gameObject.SetActive(false);
+        /*networkManager = GameObject.FindGameObjectWithTag("Network").GetComponent<NetworkManager>();
+        networkManager.gameObject.SetActive(false);*/
         playerManager = GameObject.FindGameObjectWithTag("PlayerManager").GetComponent<PlayerManager>();
         initialPosition = Vector3.zero;
         initialRotation = Quaternion.identity;
@@ -69,7 +69,7 @@ public class ProjectManagerDemo : MonoBehaviour
         EventManager.TriggerEvent("LOADING_SCREEN");
         //fader.FadeOut();
         yield return new WaitUntil(() => SceneManager.GetSceneByName(sceneName).isLoaded);
-        networkManager.gameObject.SetActive(true);
+        //networkManager.gameObject.SetActive(true);
         //playerManager.ConnectToServer();
         EventManager.TriggerEvent("LOADING_SCREEN");
         EventManager.TriggerEvent("LOADED_FIRST_SECTION");
