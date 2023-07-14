@@ -42,7 +42,7 @@ public class ProjectManagerDemo : MonoBehaviour
     }
 
     void Start()
-    {        
+    {   
         StartCoroutine(LoadMenuScene());       
     }
 
