@@ -68,7 +68,7 @@ public class ProjectManagerDemo : MonoBehaviour
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(menuScene));
         if (!DoesSceneExist(sceneName)) sceneName = defaultScene;
         
-            SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         EventManager.TriggerEvent("LOADING_SCREEN");
         //fader.FadeOut();
         yield return new WaitUntil(() => SceneManager.GetSceneByName(sceneName).isLoaded);

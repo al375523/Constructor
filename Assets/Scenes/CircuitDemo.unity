@@ -4323,6 +4323,7 @@ MonoBehaviour:
   originalY: 0
   actualY: 0
   sceneName: LVB_PART_01
+  defaultScene: LVB_PART_01
   tabletPrefab: {fileID: 469676196126735448, guid: 5569eca658e6042dc8fb263427088680, type: 3}
   menuScene: Scene_Menus_VR
 --- !u!114 &2144263479

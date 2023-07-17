@@ -29,6 +29,7 @@ TagManager:
   - Submenu
   - Button
   - Marker
+  - Structure
   layers:
   - Default
   - TransparentFX
