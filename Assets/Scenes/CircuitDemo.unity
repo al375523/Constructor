@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.377
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 338554006}
-  m_IndirectSpecularColor: {r: 0.058802307, g: 0.19203816, b: 0.38636985, a: 0.377}
+  m_IndirectSpecularColor: {r: 0.058847204, g: 0.19212553, b: 0.3861909, a: 0.377}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4324,6 +4324,7 @@ MonoBehaviour:
   originalY: 0
   actualY: 0
   sceneName: LVB_PART_01
+  defaultSceneName: LVB_PART_01
   tabletPrefab: {fileID: 469676196126735448, guid: 5569eca658e6042dc8fb263427088680, type: 3}
   menuScene: Scene_Menus_VR
 --- !u!114 &2144263479

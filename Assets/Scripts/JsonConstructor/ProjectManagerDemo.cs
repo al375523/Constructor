@@ -13,6 +13,7 @@ public class ProjectManagerDemo : MonoBehaviour
     [HideInInspector] public float actualY = 0f;
 
     public string sceneName;
+    public string defaultSceneName;
     public GameObject tabletPrefab;   
     public string menuScene;
 
@@ -68,6 +69,10 @@ public class ProjectManagerDemo : MonoBehaviour
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         EventManager.TriggerEvent("LOADING_SCREEN");
         //fader.FadeOut();
+        if (!SceneManager.GetSceneByName(sceneName).IsValid())
+        {
+            sceneName = defaultSceneName;
+        }
         yield return new WaitUntil(() => SceneManager.GetSceneByName(sceneName).isLoaded);
         //networkManager.gameObject.SetActive(true);
         //playerManager.ConnectToServer();
