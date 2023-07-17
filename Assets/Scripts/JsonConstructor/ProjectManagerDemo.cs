@@ -13,7 +13,7 @@ public class ProjectManagerDemo : MonoBehaviour
     [HideInInspector] public float actualY = 0f;
 
     public string sceneName;
-    public string defaultSceneName;
+    public string defaultScene;
     public GameObject tabletPrefab;   
     public string menuScene;
 
@@ -66,13 +66,14 @@ public class ProjectManagerDemo : MonoBehaviour
     IEnumerator LoadFirstSection()
     {
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(menuScene));
+        if (!DoesSceneExist(sceneName))
+        {
+            sceneName = defaultScene;
+        }
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         EventManager.TriggerEvent("LOADING_SCREEN");
         //fader.FadeOut();
-        if (!SceneManager.GetSceneByName(sceneName).IsValid())
-        {
-            sceneName = defaultSceneName;
-        }
+        
         yield return new WaitUntil(() => SceneManager.GetSceneByName(sceneName).isLoaded);
         //networkManager.gameObject.SetActive(true);
         //playerManager.ConnectToServer();
@@ -119,5 +120,23 @@ public class ProjectManagerDemo : MonoBehaviour
         yield return null;       
         SceneManager.LoadSceneAsync(0);       
     }
-        
+
+    bool DoesSceneExist(string name)
+    {
+        if (string.IsNullOrEmpty(name))
+            return false;
+
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            var scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+            var lastSlash = scenePath.LastIndexOf("/");
+            var sceneName = scenePath.Substring(lastSlash + 1, scenePath.LastIndexOf(".") - lastSlash - 1);
+
+            if (string.Compare(name, sceneName, true) == 0)
+                return true;
+        }
+
+        return false;
+    }
+
 }
