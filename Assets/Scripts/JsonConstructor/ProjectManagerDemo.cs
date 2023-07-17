@@ -13,6 +13,7 @@ public class ProjectManagerDemo : MonoBehaviour
     [HideInInspector] public float actualY = 0f;
 
     public string sceneName;
+    public string defaultScene;
     public GameObject tabletPrefab;   
     public string menuScene;
 
@@ -65,7 +66,9 @@ public class ProjectManagerDemo : MonoBehaviour
     IEnumerator LoadFirstSection()
     {
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(menuScene));
-        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        if (!DoesSceneExist(sceneName)) sceneName = defaultScene;
+        
+            SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         EventManager.TriggerEvent("LOADING_SCREEN");
         //fader.FadeOut();
         yield return new WaitUntil(() => SceneManager.GetSceneByName(sceneName).isLoaded);
@@ -114,5 +117,23 @@ public class ProjectManagerDemo : MonoBehaviour
         yield return null;       
         SceneManager.LoadSceneAsync(0);       
     }
-        
+
+    bool DoesSceneExist(string name)
+    {
+        if (string.IsNullOrEmpty(name))
+            return false;
+
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            var scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+            var lastSlash = scenePath.LastIndexOf("/");
+            var sceneName = scenePath.Substring(lastSlash + 1, scenePath.LastIndexOf(".") - lastSlash - 1);
+
+            if (string.Compare(name, sceneName, true) == 0)
+                return true;
+        }
+
+        return false;
+    }
+
 }
