@@ -190,7 +190,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7903962780884198354}
-  - component: {fileID: 7903962780884198355}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -213,18 +212,6 @@ Transform:
   m_Father: {fileID: 7903962780202782359}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7903962780884198355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7903962780884198353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1a2b1947b89ba44bb3d82a16dcb432a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7903962781519451168
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +272,9 @@ MonoBehaviour:
   - {fileID: 0}
   avatarPrefab: {fileID: 4563809063191094885, guid: 68982b65bdab79146b047198032e8c71, type: 3}
   photonVoiceSetupPrefab: {fileID: 6126849573364387813, guid: 08fc2c52e654ced4bbd0c856d52d9f4d, type: 3}
+  circuitPrefab: {fileID: 0}
   userID: 0
+  avatarObject: {fileID: 0}
 --- !u!114 &7903962781519451171
 MonoBehaviour:
   m_ObjectHideFlags: 0

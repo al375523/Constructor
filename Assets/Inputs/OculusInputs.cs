@@ -66,7 +66,7 @@ public class OculusInputs : MonoBehaviour
     private void OnEnable()
     {
         CurrentInputState = InputStates.MenuOpened;
-        CurrentMovementState = MovementStates.Walk;
+        CurrentMovementState = MovementStates.Fly;
     }
 
     void Start()
