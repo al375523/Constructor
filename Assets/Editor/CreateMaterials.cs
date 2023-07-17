@@ -81,7 +81,7 @@ public class CreateMaterials : Editor
             aux.color = color;
             if (mat.transparency > 0)
             {
-                aux.SetFloat("_Mode", 3);
+                aux.SetFloat("_surface", 1);
             }                     
             AssetDatabase.CreateAsset(aux,  materialFolderPath + @aux.name + ".mat");
             AssetDatabase.Refresh();
