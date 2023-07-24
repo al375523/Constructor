@@ -96,7 +96,7 @@ public class EditorCreateMaterial : EditorWindow
                     EditorSceneManager.SaveScene(scene);
                     EditorSceneManager.CloseScene(scene, true);
                 }
-
+                EditorUtility.DisplayDialog("Result", "Finished!", "OK");
             } 
             catch(Exception e) { EditorUtility.DisplayDialog("Something went wrong", e.Message + " "+ e.StackTrace, "OK"); }            
         }         
