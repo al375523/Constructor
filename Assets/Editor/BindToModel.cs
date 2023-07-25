@@ -103,9 +103,10 @@ public class BindToModel : Editor
         string cutName = "";
         foreach (char charac in gb.name)
         {
-            if (charac.ToString() == " ")
+            if (charac.ToString() == "[")
                 break;
-            cutName += charac;
+            if (charac.ToString() != " " && charac.ToString() != "/" && charac.ToString() != @"\")
+                cutName += charac;
         }
         Material createdMaterial = null;
         try
