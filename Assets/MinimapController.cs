@@ -41,17 +41,19 @@ public class MinimapController : MonoBehaviour
         int j = 1;
         for (int i=0; i< images.Length; i++)
         {
-            if (images[i].gameObject.name.Contains("Pointer"))
+            if (images[i].gameObject.name.Contains("LVB"))
             {               
                 images[i].gameObject.GetComponentInChildren<TMP_Text>().text = "Section: " + j;
                 pointerList.Add(images[i].gameObject);
                 j += 1;
-                if (images[i].gameObject.name.Contains("Pointer_01"))
+                if (images[i].gameObject.name == projectManager.sceneName)
                 {
+                    Debug.Log("Length images: " + images.Length);
                     images[i].sprite = highligthedPointer;
                 }
             }
-        }        
+        }   
+        
     }
     
     // Update is called once per frame
@@ -81,7 +83,7 @@ public class MinimapController : MonoBehaviour
     IEnumerator WaitToScene(string name)
     {
         EventManager.TriggerEvent("LOADING_SCREEN");
-        fader.FadeOut();
+        //fader.FadeOut();
         unloadOperation = SceneManager.UnloadSceneAsync(actualSection);
         actualSection = name;
         Resources.UnloadUnusedAssets();
@@ -93,7 +95,7 @@ public class MinimapController : MonoBehaviour
         EventManager.TriggerEvent("LOADING_SECTION");
         EventManager.TriggerEvent("LOADING_SCREEN");
         EventManager.TriggerEvent("FORCE_SHOW");
-        fader.FadeIn();
+        //fader.FadeIn();
         inputSytem.OpenCloseMinimap();
         if (PhotonNetwork.IsMasterClient)
         {

@@ -25,6 +25,7 @@ public class MenuManager : MonoBehaviour
     public GameObject panelText;
     public TMP_Text infoText;
     GameObject player;
+    ProjectManagerDemo projectManager;
     //NetworkManager networkManager;
 
     
@@ -33,6 +34,7 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        projectManager = FindObjectOfType<ProjectManagerDemo>();
         actualPanel = panels[0];
         initialPosition = Vector3.zero;
         initialRotation = Quaternion.identity;
@@ -67,7 +69,9 @@ public class MenuManager : MonoBehaviour
     {
         actualPanel.SetActive(false);
         panels[index].SetActive(true);
-        actualPanel = panels[index];       
+        actualPanel = panels[index];
+
+        if (!isSubmenu && actualPanel == panels[5]) projectManager.ShowScenes();
     }   
 
     public void ResetMenu()

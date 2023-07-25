@@ -16,17 +16,21 @@ public class ProjectManagerDemo : MonoBehaviour
     public string defaultScene;
     public GameObject tabletPrefab;   
     public string menuScene;
+    public MinimapController minimapController;
+    public GameObject minimap;
 
     GameObject menuObj;
     GameObject player;
     GameObject tabletInstance;
     
-    ButtonListener startButton;
+    ButtonListener startButton1, startButton2, startButton3, startButton4, startButton5, startButton6;
+    ButtonListener[] startButtons;
     OculusInputs oculusInputs;
     MenuManager submenuManager;
     //NetworkManager networkManager;
     //FadeScreen fader;
     PlayerManager playerManager;
+    
     void Awake()
     {
         /*networkManager = GameObject.FindGameObjectWithTag("Network").GetComponent<NetworkManager>();
@@ -52,38 +56,32 @@ public class ProjectManagerDemo : MonoBehaviour
         
     }
 
-    public void StartButton()
+    public void StartSection(string name)
     {
-        menuObj.SetActive(false);        
-        StartCoroutine(LoadFirstSection());
+        StartCoroutine(LoadSection(name));
     }
 
-    public void StartFirstSection()
-    {
-        StartCoroutine(LoadFirstSection());
-    }
-
-    IEnumerator LoadFirstSection()
+    public IEnumerator LoadSection(string name)
     {
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(menuScene));
-        if (!DoesSceneExist(sceneName))
-        {
-            sceneName = defaultScene;
-        }
-        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        sceneName = name;
+        SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
         EventManager.TriggerEvent("LOADING_SCREEN");
         //fader.FadeOut();
         
-        yield return new WaitUntil(() => SceneManager.GetSceneByName(sceneName).isLoaded);
+        yield return new WaitUntil(() => SceneManager.GetSceneByName(name).isLoaded);
         //networkManager.gameObject.SetActive(true);
         //playerManager.ConnectToServer();
         EventManager.TriggerEvent("LOADING_SCREEN");
         EventManager.TriggerEvent("LOADED_FIRST_SECTION");
         //fader.FadeIn();
+        
         tabletInstance = Instantiate(tabletPrefab);
         tabletInstance.transform.SetParent(player.transform);
         oculusInputs.tabletPrefab = tabletInstance;
-        player.transform.position = new Vector3(player.transform.position.x, originalY, player.transform.position.z);
+        //player.transform.position = new Vector3(player.transform.position.x, originalY, player.transform.position.z);
+        playerManager.GetPositions();
+        
     }
 
     IEnumerator LoadMenuScene()
@@ -91,16 +89,36 @@ public class ProjectManagerDemo : MonoBehaviour
         EventManager.TriggerEvent("LOADING_SCREEN");
         //fader.FadeOut();
         SceneManager.LoadSceneAsync(menuScene, LoadSceneMode.Additive);
-        yield return new WaitUntil(() => SceneManager.GetSceneByName(menuScene).isLoaded);       
-        
-        startButton = GameObject.FindGameObjectWithTag("StartButton").GetComponent<ButtonListener>();
-        startButton.proximityEvent.AddListener(StartFirstSection);
+        yield return new WaitUntil(() => SceneManager.GetSceneByName(menuScene).isLoaded);
+
         oculusInputs.playerManager = playerManager;
         yield return new WaitForSeconds(2f);
         EventManager.TriggerEvent("LOADING_SCREEN");
         //fader.FadeIn();
         oculusInputs.ChangeInputState(2);
-    }   
+    
+    }
+
+    public void ShowScenes()
+    {
+        startButton1 = GameObject.FindGameObjectWithTag("Start0").GetComponent<ButtonListener>();
+        startButton1.proximityEvent.AddListener(delegate { StartSection(startButton1.transform.parent.name); });
+
+        startButton2 = GameObject.FindGameObjectWithTag("Start1").GetComponent<ButtonListener>();
+        startButton2.proximityEvent.AddListener(delegate { StartSection(startButton2.transform.parent.name); });
+
+        startButton3 = GameObject.FindGameObjectWithTag("Start2").GetComponent<ButtonListener>();
+        startButton3.proximityEvent.AddListener(delegate { StartSection(startButton3.transform.parent.name); });
+
+        startButton4 = GameObject.FindGameObjectWithTag("Start3").GetComponent<ButtonListener>();
+        startButton4.proximityEvent.AddListener(delegate { StartSection(startButton4.transform.parent.name); });
+
+        startButton5 = GameObject.FindGameObjectWithTag("Start4").GetComponent<ButtonListener>();
+        startButton5.proximityEvent.AddListener(delegate { StartSection(startButton5.transform.parent.name); });
+
+        startButton6 = GameObject.FindGameObjectWithTag("Start5").GetComponent<ButtonListener>();
+        startButton6.proximityEvent.AddListener(delegate { StartSection(startButton6.transform.parent.name); });
+    }
     public void ReturnToMenu(bool v)
     {
         if (v)

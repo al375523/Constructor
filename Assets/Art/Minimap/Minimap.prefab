@@ -256,10 +256,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlPoints:
-  - {x: -35, y: 35, z: -5}
-  - {x: -11.666666, y: 35, z: 0}
-  - {x: 11.666668, y: 35, z: 0}
-  - {x: 35, y: 35, z: 0}
+  - {x: -13, y: 7, z: -5}
+  - {x: -4.333333, y: 7, z: 0}
+  - {x: 4.333334, y: 7, z: 0}
+  - {x: 13, y: 7, z: 0}
 --- !u!1 &519744970482756501
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   cooldown: 0
-  needsCooldown: 1
+  needsCooldown: 0
 --- !u!114 &2941434406153113736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 3817909102745040872}
   - component: {fileID: 1677421655051632340}
   m_Layer: 5
-  m_Name: Pointer_05_LVB_Part_04_02
+  m_Name: LVB_PART_04_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -709,10 +709,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlPoints:
-  - {x: -35, y: -35, z: -5}
-  - {x: -11.666666, y: -35, z: 0}
-  - {x: 11.666668, y: -35, z: 0}
-  - {x: 35, y: -35, z: 0}
+  - {x: -13, y: -7, z: -5}
+  - {x: -4.333333, y: -7, z: 0}
+  - {x: 4.333334, y: -7, z: 0}
+  - {x: 13, y: -7, z: 0}
 --- !u!1 &1151998069348507797
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8811447921897907503}
   - component: {fileID: 5135155939353779691}
+  - component: {fileID: 1945563342}
   m_Layer: 5
   m_Name: Manager
   m_TagString: Untagged
@@ -763,6 +764,28 @@ MonoBehaviour:
   defaultPointer: {fileID: 21300000, guid: 1d48696affb846d4f9eaced8e0c54af7, type: 3}
   actualText: {fileID: 8141536465973331974}
   actualSection: 
+--- !u!114 &1945563342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151998069348507797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1682420661328762205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7133066705791745079
 Transform:
   m_ObjectHideFlags: 0
@@ -1369,7 +1392,7 @@ GameObject:
   - component: {fileID: 7539990899929053995}
   - component: {fileID: 3889602201964408728}
   m_Layer: 5
-  m_Name: Pointer_03_LVB_Part_03
+  m_Name: LVB_PART_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1498,8 +1521,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 52461.996, y: 19112.18, z: 0.9999999}
-  m_Center: {x: -53.06602, y: -164.16013, z: 0}
+  m_Size: {x: 52461.992, y: 19112.18, z: 4817.6045}
+  m_Center: {x: -53.06602, y: -164.16013, z: -2408.3025}
 --- !u!1 &2743297116443451562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1535,7 @@ GameObject:
   - component: {fileID: 6905859896722785244}
   - component: {fileID: 1456253666194122577}
   m_Layer: 5
-  m_Name: Pointer_02_LVB_Part_02
+  m_Name: LVB_PART_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1692,7 +1715,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   cooldown: 0
-  needsCooldown: 1
+  needsCooldown: 0
 --- !u!114 &7385855415611658560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2055,9 +2078,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4063517665518463051}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 0.099999994}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7278080815057114828}
@@ -2065,11 +2088,11 @@ RectTransform:
   - {fileID: 8451234508111283426}
   m_Father: {fileID: 4578760525966558706}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 244.12, y: -109.6}
-  m_SizeDelta: {x: 70, y: 70}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -5, y: -121.25}
+  m_SizeDelta: {x: 26, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2113932051070472977
 CanvasRenderer:
@@ -2099,7 +2122,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e6af03a0e466145bf9a2d9a156f03f23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dee57a24fbd7a249b9ab4bf755e00f3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2181,8 +2204,6 @@ RectTransform:
   - {fileID: 8241377056031685093}
   - {fileID: 7172367669815097028}
   - {fileID: 8459008940855840169}
-  - {fileID: 7361771778793923960}
-  - {fileID: 2365567520537313022}
   m_Father: {fileID: 4578760525966558706}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -2247,8 +2268,8 @@ MonoBehaviour:
   uiGraphic: {fileID: 4474226198673421545}
   refCUIGraphic: {fileID: 0}
   refCurves:
-  - {fileID: 6297955867313599439}
-  - {fileID: 9031018522646539646}
+  - {fileID: 0}
+  - {fileID: 0}
   refCurvesControlRatioPoints:
   - array:
     - {x: 0, y: 0, z: -24.592457}
@@ -2551,9 +2572,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4894927842418798783}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.39}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.0025, y: 0.0025, z: 0.0025}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 502801566410677213}
@@ -2641,7 +2662,7 @@ GameObject:
   - component: {fileID: 2084015055730910708}
   - component: {fileID: 8671274742973808138}
   m_Layer: 5
-  m_Name: Pointer_04_LVB_Part_04_01
+  m_Name: LVB_PART_04_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2885,7 +2906,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   cooldown: 0
-  needsCooldown: 1
+  needsCooldown: 0
 --- !u!114 &6476488149131965435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2898,55 +2919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b86fea613a496e46b2ede196bb8f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5671481843494504266
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7361771778793923960}
-  - component: {fileID: 6297955867313599439}
-  m_Layer: 0
-  m_Name: BottomRefCurve
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7361771778793923960
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5671481843494504266}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 502801566410677213}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6297955867313599439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5671481843494504266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 983a3e151cd916d4faf111dc86266574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlPoints:
-  - {x: -121.27205, y: -45.53335, z: -24.592457}
-  - {x: -40.424023, y: -45.53335, z: 0}
-  - {x: 40.424007, y: -45.53335, z: 0}
-  - {x: 121.27205, y: -45.53335, z: -22.640972}
 --- !u!1 &5694700347137950700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,7 +2981,7 @@ GameObject:
   - component: {fileID: 3429146246938342135}
   - component: {fileID: 6002893821691172413}
   m_Layer: 5
-  m_Name: Pointer_06_LVB_Part_05
+  m_Name: LVB_PART_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3189,7 +3161,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   cooldown: 0
-  needsCooldown: 1
+  needsCooldown: 0
 --- !u!114 &3059174546990094845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3791,7 +3763,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   cooldown: 0
-  needsCooldown: 1
+  needsCooldown: 0
 --- !u!114 &1822415284008021398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3816,7 +3788,7 @@ GameObject:
   - component: {fileID: 8633103038490190792}
   - component: {fileID: 3927737950628950613}
   m_Layer: 5
-  m_Name: Pointer_01_LVB_Part_01
+  m_Name: LVB_PART_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3996,7 +3968,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   cooldown: 0
-  needsCooldown: 1
+  needsCooldown: 0
 --- !u!114 &8786132200552125555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4090,24 +4062,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: OculusInputs, Assembly-CSharp
+        m_MethodName: OpenCloseMinimap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: ChangePanel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TypePanel
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4180,52 +4152,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b86fea613a496e46b2ede196bb8f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &9146071714784399172
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2365567520537313022}
-  - component: {fileID: 9031018522646539646}
-  m_Layer: 0
-  m_Name: TopRefCurve
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2365567520537313022
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9146071714784399172}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 502801566410677213}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9031018522646539646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9146071714784399172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 983a3e151cd916d4faf111dc86266574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlPoints:
-  - {x: -121.54403, y: 45.53335, z: -27.424088}
-  - {x: -40.424023, y: 45.53335, z: 0}
-  - {x: 40.424007, y: 45.53335, z: 0}
-  - {x: 121.27205, y: 45.53335, z: -24.633837}
