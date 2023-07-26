@@ -83,7 +83,7 @@ public class MinimapController : MonoBehaviour
     IEnumerator WaitToScene(string name)
     {
         EventManager.TriggerEvent("LOADING_SCREEN");
-        //fader.FadeOut();
+        fader.FadeOut();
         unloadOperation = SceneManager.UnloadSceneAsync(actualSection);
         actualSection = name;
         Resources.UnloadUnusedAssets();
@@ -95,7 +95,7 @@ public class MinimapController : MonoBehaviour
         EventManager.TriggerEvent("LOADING_SECTION");
         EventManager.TriggerEvent("LOADING_SCREEN");
         EventManager.TriggerEvent("FORCE_SHOW");
-        //fader.FadeIn();
+        fader.FadeIn();
         inputSytem.OpenCloseMinimap();
         if (PhotonNetwork.IsMasterClient)
         {

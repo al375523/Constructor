@@ -2318,6 +2318,10 @@ PrefabInstance:
       propertyPath: circuitManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1357274041979547271, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.015
+      objectReference: {fileID: 0}
     - target: {fileID: 1669368200196534043, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2594,6 +2598,10 @@ PrefabInstance:
       propertyPath: m_Cameras.Array.data[0]
       value: 
       objectReference: {fileID: 70161074}
+    - target: {fileID: 4101514598252789855, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 4101514598252789855, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 2147483647
@@ -3684,7 +3692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198195939296700367, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5474190136646147859, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
       propertyPath: PlayerController
@@ -3701,6 +3709,22 @@ PrefabInstance:
     - target: {fileID: 6839846345502764790, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877046955965907651, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
+      propertyPath: fadeColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877046955965907651, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
+      propertyPath: fadeColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877046955965907651, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
+      propertyPath: fadeColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877046955965907651, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
+      propertyPath: fadeColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6901458703308437060, guid: 3cd28b5295f98b74b9eae45946d7f6ce, type: 3}
       propertyPath: m_Constraints
