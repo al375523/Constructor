@@ -49,6 +49,7 @@ public class TabletButtons : MonoBehaviour
     
     void LoadingSection()
     {
+        ChangePanel("MainPanel");
         constructionPanel = FindObjectOfType<ConstructionPanel>();
         hide = !hide;
         for (int i = 0; i < hiddenObjects.Count; i++)
@@ -59,8 +60,6 @@ public class TabletButtons : MonoBehaviour
                 ChangeType(i);
                 constructionPanel.HideAllItemsOfType(type);
             }
-                
- 
     }
 
     IEnumerator WaitArtScene()
@@ -75,14 +74,12 @@ public class TabletButtons : MonoBehaviour
     {
         if (!TypeHideList[typeInt].activeSelf)
         {
-            Debug.Log("ENTRA");
             hiddenObjects[typeInt] = true;
             constructionPanel.HideAllItemsOfType(type);
             TypeHideList[typeInt].SetActive(true);
         }
         else
         {
-            Debug.Log("NO ENTRA");
             hiddenObjects[typeInt] = false;
             constructionPanel.HideAllItemsOfType(type);
             TypeHideList[typeInt].SetActive(false);
