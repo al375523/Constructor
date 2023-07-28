@@ -51,11 +51,6 @@ public class ProjectManagerDemo : MonoBehaviour
         StartCoroutine(LoadMenuScene());       
     }
 
-    void Update()
-    {
-        
-    }
-
     public void StartSection(string name)
     {
         StartCoroutine(LoadSection(name));
@@ -99,26 +94,6 @@ public class ProjectManagerDemo : MonoBehaviour
     
     }
 
-    public void ShowScenes()
-    {
-        startButton1 = GameObject.FindGameObjectWithTag("Start0").GetComponent<ButtonListener>();
-        startButton1.proximityEvent.AddListener(delegate { StartSection(startButton1.transform.parent.name); });
-
-        startButton2 = GameObject.FindGameObjectWithTag("Start1").GetComponent<ButtonListener>();
-        startButton2.proximityEvent.AddListener(delegate { StartSection(startButton2.transform.parent.name); });
-
-        startButton3 = GameObject.FindGameObjectWithTag("Start2").GetComponent<ButtonListener>();
-        startButton3.proximityEvent.AddListener(delegate { StartSection(startButton3.transform.parent.name); });
-
-        startButton4 = GameObject.FindGameObjectWithTag("Start3").GetComponent<ButtonListener>();
-        startButton4.proximityEvent.AddListener(delegate { StartSection(startButton4.transform.parent.name); });
-
-        startButton5 = GameObject.FindGameObjectWithTag("Start4").GetComponent<ButtonListener>();
-        startButton5.proximityEvent.AddListener(delegate { StartSection(startButton5.transform.parent.name); });
-
-        startButton6 = GameObject.FindGameObjectWithTag("Start5").GetComponent<ButtonListener>();
-        startButton6.proximityEvent.AddListener(delegate { StartSection(startButton6.transform.parent.name); });
-    }
     public void ReturnToMenu(bool v)
     {
         if (v)
@@ -156,5 +131,4 @@ public class ProjectManagerDemo : MonoBehaviour
 
         return false;
     }
-
 }

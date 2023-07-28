@@ -28,9 +28,6 @@ public class MenuManager : MonoBehaviour
     ProjectManagerDemo projectManager;
     //NetworkManager networkManager;
 
-    
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -70,9 +67,12 @@ public class MenuManager : MonoBehaviour
         actualPanel.SetActive(false);
         panels[index].SetActive(true);
         actualPanel = panels[index];
-
-        if (!isSubmenu && actualPanel == panels[5]) projectManager.ShowScenes();
     }   
+
+    public void PlayScene(string name)
+    {
+        projectManager.StartSection(name);
+    }
 
     public void ResetMenu()
     {
