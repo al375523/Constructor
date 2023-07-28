@@ -125,13 +125,11 @@ public class TabletButtons : MonoBehaviour
         currentType.text = sType;
     }
 
-    
-
-    public void ChangeToTypePanel()
+    /*public void ChangeToTypePanel()
     {        
         ChangePanel("");
         StartCoroutine(WaitPanel("ShowHidePanel"));
-    }
+    }*/
     
     public void ChangePanel(string panelName)
     {        
@@ -142,11 +140,11 @@ public class TabletButtons : MonoBehaviour
         }
     }
 
-    IEnumerator WaitPanel(string n)
+    /*IEnumerator WaitPanel(string n)
     {
         yield return new WaitForSeconds(1f);
         ChangePanel(n);
-    }
+    }*/
 
     public void ChangeMovement()
     {
