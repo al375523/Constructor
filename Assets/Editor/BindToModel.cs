@@ -89,6 +89,11 @@ public class BindToModel : Editor
 
     static void SearchAndBindSingular(ModelClass model, GameObject gb, Material[] materials, string materialPath)
     {
+        string newMatPath = "Assets/Resources/Materials/ModelMaterials/";
+        if (!Directory.Exists(newMatPath))
+        {
+            Directory.CreateDirectory(newMatPath);
+        }
         string shaderName = "Universal Render Pipeline/Lit";
         Material matCombination = new Material(Shader.Find(shaderName));
 
@@ -111,7 +116,7 @@ public class BindToModel : Editor
         Material createdMaterial = null;
         try
         {
-            createdMaterial = AssetDatabase.LoadAssetAtPath<Material>("Assets/Resources/Materials/" + cutName + ".mat");
+            createdMaterial = AssetDatabase.LoadAssetAtPath<Material>(newMatPath + cutName + ".mat");
         }
         catch
         {
@@ -157,7 +162,7 @@ public class BindToModel : Editor
             matCombination.SetFloat("_Glossiness", glossiness);
             matCombination.SetFloat("_Metallic", metallic);
 
-            AssetDatabase.CreateAsset(matCombination, "Assets/Resources/Materials/" + cutName + ".mat");
+            AssetDatabase.CreateAsset(matCombination, newMatPath + cutName + ".mat");
             AssetDatabase.Refresh();
         }
         else
