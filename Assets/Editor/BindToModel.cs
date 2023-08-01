@@ -9,7 +9,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BindToModel : Editor
-{        
+{
+    static string[] layers;
     public static Material[] GetMaterials(string path)
     {
         return Resources.LoadAll<Material>(path);
@@ -25,6 +26,7 @@ public class BindToModel : Editor
                 string json = r.ReadToEnd();
                 List<ModelClass> models = new List<ModelClass>();
                 models = JsonConvert.DeserializeObject<List<ModelClass>>(json);
+                layers = Enumerable.Range(0, 31).Select(index => LayerMask.LayerToName(index)).Where(i => !string.IsNullOrEmpty(i)).ToArray();
                 BindModelMaterials(models, materialPath);
             }
         }
@@ -45,6 +47,8 @@ public class BindToModel : Editor
                 {
                     //SearchAndBind(actualModel, gb, materials);
                     SearchAndBindSingular(actualModel, gb, materials, materialPath);
+                    if (actualModel.type.Contains("Floor"))
+                        AddColliderAndLayer(gb);
                 }
             }
         }
@@ -176,4 +180,19 @@ public class BindToModel : Editor
         if (gb.name.Contains("Surface") || gb.name.Contains("Pad Pad")) DestroyImmediate(gb);
     }
 
+    static void AddColliderAndLayer(GameObject gb)
+    {
+        gb.AddComponent<MeshCollider>();
+        if (layers.Length != 0 && (layers.Contains("Floor") || layers.Contains("floor")))
+        {
+            foreach (string layerName in layers)
+            {
+                if (layerName == "Floor" || layerName == "floor")
+                {
+                    gb.layer = LayerMask.NameToLayer(layerName);
+                    break;
+                }
+            }
+        }
+    }
 }

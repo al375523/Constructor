@@ -7,4 +7,5 @@ public class ModelClass
     public string Id { get; set; }
     public string name { get; set; }
     public List<string> materials { get; set; }
+    public string type { get; set; }
 }
