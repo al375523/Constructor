@@ -5,21 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: fa266baac5e6775499cb8bc15defa081
-  - enabled: 0
-    path: Assets/MetaAvatarsTemplate/Scenes/MetaAvatar2Pun.unity
-    guid: c2a6d6239126ef545ba41addbeccd081
-  - enabled: 0
-    path: 
-    guid: c99832acc29416e4a8fd90a658255389
-  - enabled: 0
-    path: 
-    guid: 1888c59d61b9e5543999fafe01053baa
   - enabled: 1
     path: Assets/Scenes/CircuitDemo.unity
     guid: c5577d912d41c6c4ead0981d2d33a338
@@ -44,12 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LVB_PART_05.unity
     guid: d35820a3d921d3445937e22aafa763bc
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Structure.unity
-    guid: aef02e1ccd5ef9043b56a471a42508a6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e8235ff2a69a6794aae14b9c4a487c76, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 80b39efe4994509418fa5fc9f5599b53, type: 2}

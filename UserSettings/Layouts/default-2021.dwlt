@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 141
+  controlID: 107
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 119
+  controlID: 108
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 21
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -671,11 +671,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.07339602, y: -0.48854274, z: 0.041287243, w: -0.86848766}
     speed: 2
-    m_Value: {x: -0.07333268, y: -0.48983604, z: 0.041396543, w: -0.8677381}
+    m_Value: {x: -0.07339469, y: -0.48853388, z: 0.041286495, w: -0.8684719}
   m_Size:
-    m_Target: 0.6347339
+    m_Target: 1.825503
     speed: 2
-    m_Value: 0.6347339
+    m_Value: 1.7468928
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -722,8 +722,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 1412
-    height: 649
+    width: 1210
+    height: 464
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -758,7 +758,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -548298
+  m_LastSelectedObjectID: 30310
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -792,7 +792,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d879ffff
+      m_ExpandedIDs: 2e99fdffc499fdff3ce1fdff9c0dfeff2e3dfeffc262feffe47cfeffb6a6feffa4abfeff90bafeffb8c8feff4ec9feffc610ffff263dffffb86cffff4c92ffff6eacffff42d6ffff30dbffff1ceaffff14fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -857,22 +857,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Oculus
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 53
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Oculus
   m_LastFoldersGridSize: 53
   m_LastProjectPath: E:\GitHubDeskstop\Constructor2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 16b00000
-    m_LastClickedID: 45078
-    m_ExpandedIDs: 00000000ceaf0000d0af0000d2af0000d4af0000d6af0000d8af0000daaf0000deaf0000e0af0000560f01007e0f0100800f0100
+    m_SelectedIDs: 66b00000
+    m_LastClickedID: 45158
+    m_ExpandedIDs: 0000000050b0000052b0000054b0000056b0000058b000005ab000005cb000005eb0000060b0000062b0000070b00000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -900,7 +900,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ceaf0000d0af0000d2af0000d4af0000d6af0000d8af0000daaf0000dcaf0000deaf0000e0af0000e2af0000
+    m_ExpandedIDs: 0000000050b0000052b0000054b0000056b0000058b000005ab000005cb000005eb0000060b0000062b0000064b0000066b0000068b000006ab00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -927,7 +927,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300000000000002a10300546908002e8000008cef0100768c00005a8c0000327104001c720400e0bd0000b47d0000886f00000eb30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -952,7 +952,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 49.5}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 53
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 170
