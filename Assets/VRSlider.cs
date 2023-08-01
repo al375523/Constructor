@@ -10,7 +10,7 @@ public class VRSlider : MonoBehaviour
     public Vector3 hitPoint;
     public TMP_Text valueText;
     public string sliderType;
-    public bool isSubmenu = false;
+    public bool isSubmenu;
     [HideInInspector] public ProjectManagerDemo projectManager;
 
     BoxCollider boxCollider;
@@ -37,15 +37,14 @@ public class VRSlider : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        if (isSubmenu) elipse.transform.localPosition = new Vector3(0f, elipse.transform.localPosition.y, elipse.transform.localPosition.z);
     }
-        
+
     public void OnRaycastReceived()
-    {        
-        elipse.transform.position = new Vector3(hitPoint.x, hitPoint.y, hitPoint.z);
+    {
+        elipse.transform.position = new Vector3(elipse.transform.position.x, hitPoint.y, hitPoint.z);
         CheckCase();
     }
 
@@ -67,7 +66,8 @@ public class VRSlider : MonoBehaviour
                 break;
             case "Audio":
                 value = Mathf.RoundToInt(hitInSlider / size * 100);
-                AudioListener.volume = value;              
+                AudioListener.volume = value;
+                if (submenu != null) UpdatePosition();
                 break;
         }
         valueText.text = value.ToString();

@@ -55,11 +55,11 @@ public class MenuManager : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, transform.position.z);
         }
-        if (isSubmenu)
+        /*if (isSubmenu)
         {            
             ShowButtons();
-           
-        }
+ 
+        }*/
     }
 
     public void ChangePanel(int index)
@@ -188,10 +188,10 @@ public class MenuManager : MonoBehaviour
 
     public void ShowButtons()
     {
-        foreach(GameObject gb in multiplayerButtons)
+        /*foreach(GameObject gb in multiplayerButtons)
         {
             gb.SetActive(false);
-        }
+        }*/
 
         //yield return new WaitForSeconds(2f);
         /*if (networkManager.CurrentNetworkState == NetworkManager.NetworkStates.Disconnected)

@@ -188,7 +188,7 @@ public class PointerVR : MonoBehaviour
             }
 
             //Change color panel
-            if (hit.collider.transform.parent.GetComponent<ButtonListener>() != null)
+            if (hit.collider.transform.parent.GetComponent<ButtonListener>() != null && hit.collider.transform.parent.tag != "Audio")
             {
                 if (!isChanged)
                 {

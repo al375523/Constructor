@@ -35,6 +35,7 @@ TagManager:
   - Start4
   - Start5
   - Start0
+  - Audio
   layers:
   - Default
   - TransparentFX
