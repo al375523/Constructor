@@ -137,8 +137,6 @@ public class PointerVR : MonoBehaviour
         circuitManager.SelectItem(null);       
     }
 
-    
-
     [PunRPC]
     void SelectItemPun()
     {        
@@ -190,6 +188,13 @@ public class PointerVR : MonoBehaviour
             //Change color panel
             if (hit.collider.transform.parent.GetComponent<ButtonListener>() != null && hit.collider.transform.parent.tag != "Audio")
             {
+                if(buttonChangedColor != hit.collider.transform.parent.parent.gameObject && buttonChangedColor != null)
+                {
+                    buttonChangedColor.GetComponent<Image>().color = initialColor;
+                    buttonChangedColor = hit.collider.transform.parent.parent.gameObject;
+                    isChanged = false;
+                    hitButton = false;
+                }
                 if (!isChanged)
                 {
                     isChanged = true;
@@ -199,13 +204,16 @@ public class PointerVR : MonoBehaviour
                     changedColor = initialColor - new Color(0.2f, 0.2f, 0.2f, 0f);
                 }
             }
-            else hitButton = false;
-            
-                
+            else
+            {
+                hitButton = false;
+                isChanged = false;
+            }   
         }
         else 
         {
             hitButton = false;
+            isChanged = false;
             beingHit = false;
             marker.SetActive(false);
             lineRenderer.material = falseColor;
