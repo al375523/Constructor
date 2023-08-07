@@ -120,7 +120,14 @@ public class BindToModel : Editor
         Material createdMaterial = null;
         try
         {
-            createdMaterial = AssetDatabase.LoadAssetAtPath<Material>(newMatPath + cutName + ".mat");
+            if (model.materials.Count > 0)
+            {
+                createdMaterial = AssetDatabase.LoadAssetAtPath<Material>(newMatPath + cutName + ".mat");
+            }
+            else
+            {
+                createdMaterial = AssetDatabase.LoadAssetAtPath<Material>("Assets/Resources/Materials/GenericMaterial" + ".mat");
+            }
         }
         catch
         {

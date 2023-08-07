@@ -47,10 +47,11 @@ public class CreateMaterials : Editor
             Directory.CreateDirectory(textureFolderPath);
         }
 
-        string shaderName = "";
-        
+        string shaderName = "";        
         shaderName = "Universal Render Pipeline/Lit";
-        
+
+        CreateDefaultMaterial(shaderName, materialFolderPath);
+
         foreach (MaterialProject mat in materialList)
         {           
             Material aux = new Material(Shader.Find(shaderName));
@@ -107,6 +108,20 @@ public class CreateMaterials : Editor
         return null;        
     }
 
+    static void CreateDefaultMaterial(string shaderName, string materialFolderPath)
+    {
+        Material aux = new Material(Shader.Find(shaderName));
+        aux.name = "GenericMaterial";
+        aux.SetFloat("_Glossiness", 0.5f);
+        aux.SetFloat("_Metallic", 1f);
+        Color color = new Color();
+        color.a = 1;
+        color.r = 0.7f;
+        color.g = 0.7f;
+        color.b = 0.7f;
+        aux.color = color;
+        AssetDatabase.CreateAsset(aux, materialFolderPath + @aux.name + ".mat");
+        AssetDatabase.Refresh();
+    }
 
-    
 }
