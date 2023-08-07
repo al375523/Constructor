@@ -241,6 +241,7 @@ namespace Chiligames.MetaAvatarsPun
             else
             {
                 Transform pos = GameObject.FindGameObjectWithTag("Structure").GetComponentsInChildren<Transform>()[0];
+                SetNewPosition(pos);
             }   
         }
 

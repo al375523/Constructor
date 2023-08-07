@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -55,6 +56,7 @@ public class EditorCreateMaterial : EditorWindow
                 GameObject gb = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Structure/StructureFBX.fbx");   
                 
                 GameObject instance = Instantiate(gb, gb.transform.position, gb.transform.rotation);
+                if (UnityEditorInternal.InternalEditorUtility.tags.ToList().Contains("Structure")) instance.tag = "Structure";
                 string structurePath = folderPath + @"\Structure.json";
 
                 if (File.Exists(structurePath)) 
