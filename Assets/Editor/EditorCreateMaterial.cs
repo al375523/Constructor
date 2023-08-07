@@ -11,7 +11,7 @@ using UnityEngine.UIElements;
 
 public class EditorCreateMaterial : EditorWindow
 {
-    string folderPath;
+    string folderPath="";
     bool finished;
     [MenuItem("Tools/Import and Bind")]
     public static void ShowWindow()
@@ -31,7 +31,10 @@ public class EditorCreateMaterial : EditorWindow
         {
             folderPath = EditorUtility.OpenFolderPanel("Select StructureFBX.fbx folder", "Assets/", "json");            
         }
-        EditorGUILayout.TextField("Path", folderPath);
+
+        if (folderPath != "")
+            EditorGUILayout.TextField("Path", folderPath);
+
         GUILayout.Label("", EditorStyles.boldLabel);
         if (GUILayout.Button("Create materials and import structure"))
         {
