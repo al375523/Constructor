@@ -94,8 +94,9 @@ public class EditorCreateMaterial : EditorWindow
                         if (i == buildScenes.Length - 1) buildScenes[i] = sceneBuild;
                         else buildScenes[i] = EditorBuildSettings.scenes[i];
                     }
-                    EditorBuildSettings.scenes = buildScenes;                    
-                    PrefabUtility.InstantiatePrefab(prefab, scene);
+                    EditorBuildSettings.scenes = buildScenes;
+                    GameObject obj = PrefabUtility.InstantiatePrefab(prefab, scene) as GameObject;
+                    PrefabUtility.UnpackPrefabInstance(obj, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);                   
                     AssetDatabase.Refresh();
                     AssetDatabase.SaveAssets();
                     EditorSceneManager.SaveScene(scene);

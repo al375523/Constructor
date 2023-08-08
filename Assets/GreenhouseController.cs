@@ -10,8 +10,8 @@ public class GreenhouseController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EventManager.StartListening("LOADING_SECTION", GetGreenhouseObj);
-        EventManager.StartListening("LOADED_FIRST_SECTION", GetGreenhouseObj);
+        //EventManager.StartListening("LOADING_SECTION", GetGreenhouseObj);
+        //EventManager.StartListening("LOADED_FIRST_SECTION", GetGreenhouseObj);
     }
 
     // Update is called once per frame

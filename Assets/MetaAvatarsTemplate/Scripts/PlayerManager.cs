@@ -225,9 +225,10 @@ namespace Chiligames.MetaAvatarsPun
 
         public void GetPositions()
         {
-            Transform[] positions = GameObject.FindGameObjectWithTag("PlayerPositions").GetComponentsInChildren<Transform>();
-            if (positions.Length > 0)
+            GameObject gb = GameObject.FindGameObjectWithTag("PlayerPositions");            
+            if (gb!=null)
             {
+                Transform[] positions = gb.GetComponentsInChildren<Transform>();
                 if (!PhotonNetwork.IsConnected && PhotonNetwork.LocalPlayer.ActorNumber <= positions.Length)
                 {
                     if (PhotonNetwork.LocalPlayer.ActorNumber > 0) SetNewPosition(positions[PhotonNetwork.LocalPlayer.ActorNumber - 1]);
