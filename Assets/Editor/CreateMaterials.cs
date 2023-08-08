@@ -47,8 +47,12 @@ public class CreateMaterials : Editor
             Directory.CreateDirectory(textureFolderPath);
         }
 
-        string shaderName = "";        
-        shaderName = "Universal Render Pipeline/Lit";
+        string shaderName = "";
+        Shader shader = Shader.Find("Universal Render Pipeline/Lit");
+        if (shader == null)
+            shaderName = "Standard";
+        else
+            shaderName = shader.name;
 
         CreateDefaultMaterial(shaderName, materialFolderPath);
 

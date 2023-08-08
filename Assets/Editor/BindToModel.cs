@@ -98,7 +98,12 @@ public class BindToModel : Editor
         {
             Directory.CreateDirectory(newMatPath);
         }
-        string shaderName = "Universal Render Pipeline/Lit";
+        string shaderName = "";
+        Shader shader = Shader.Find("Universal Render Pipeline/Lit");
+        if (shader == null)
+            shaderName = "Standard";
+        else
+            shaderName = shader.name;
         Material matCombination = new Material(Shader.Find(shaderName));
 
         float glossiness = 0f;
