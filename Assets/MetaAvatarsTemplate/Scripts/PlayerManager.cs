@@ -241,7 +241,7 @@ namespace Chiligames.MetaAvatarsPun
             }
             else
             {
-                Transform pos = GameObject.FindGameObjectWithTag("Structure").GetComponentsInChildren<Transform>()[0];
+                Transform pos = GameObject.FindGameObjectWithTag("Structure").GetComponentsInChildren<Transform>()[1];                
                 SetNewPosition(pos);
             }   
         }
@@ -249,7 +249,6 @@ namespace Chiligames.MetaAvatarsPun
         void SetNewPosition(Transform pos)
         {
             OVRCameraRig.transform.position = new Vector3(pos.transform.position.x, projectManager.actualY, pos.transform.position.z);
-            OVRCameraRig.transform.rotation = pos.transform.rotation;
         }
 
         
