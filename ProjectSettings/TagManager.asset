@@ -29,13 +29,8 @@ TagManager:
   - Submenu
   - Button
   - Marker
-  - Start1
-  - Start2
-  - Start3
-  - Start4
-  - Start5
-  - Start0
   - Audio
+  - Plant
   layers:
   - Default
   - TransparentFX

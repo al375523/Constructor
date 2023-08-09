@@ -1,4 +1,5 @@
 using Chiligames.MetaAvatarsPun;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,10 +24,8 @@ public class ProjectManagerDemo : MonoBehaviour
     GameObject player;
     GameObject tabletInstance;
     
-    ButtonListener startButton1, startButton2, startButton3, startButton4, startButton5, startButton6;
-    ButtonListener[] startButtons;
     OculusInputs oculusInputs;
-    MenuManager submenuManager;
+    public MenuManager submenuManager;
     //NetworkManager networkManager;
     FadeScreen fader;
     PlayerManager playerManager;
@@ -97,7 +96,9 @@ public class ProjectManagerDemo : MonoBehaviour
     public void ReturnToMenu(bool v)
     {
         if (v)
-        {            
+        {
+            submenuManager.timeSpeed = 1f;
+            Time.timeScale = Convert.ToSingle(submenuManager.timeSpeed);
             oculusInputs.ChangeMovementState(0);
             StartCoroutine(LoadMenu());
         }

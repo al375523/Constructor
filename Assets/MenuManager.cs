@@ -28,6 +28,16 @@ public class MenuManager : MonoBehaviour
     ProjectManagerDemo projectManager;
     //NetworkManager networkManager;
 
+    public double timeSpeed;
+    public float timePlants;
+    public TMP_Text speedText;
+    public TMP_Text timeText;
+
+    Animator plants;
+    float timeAnimation;
+    float totalTime;
+    float adjustedTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +47,14 @@ public class MenuManager : MonoBehaviour
         initialRotation = Quaternion.identity;
         player = GameObject.FindGameObjectWithTag("Player");       
         addedHeight = 0;
+        totalTime = 90f;
+        if (isSubmenu)
+        {
+            plants = GameObject.FindGameObjectWithTag("Plant").GetComponent<Animator>();
+            timeAnimation = plants.runtimeAnimatorController.animationClips[0].length;
+            Debug.Log("TIME ANIMATION: " + timeAnimation);
+
+        }
         //if (isSubmenu) networkManager = GameObject.FindGameObjectWithTag("Network").GetComponent<NetworkManager>();
         StartCoroutine(WaitSeconds());
     }
@@ -60,6 +78,11 @@ public class MenuManager : MonoBehaviour
             ShowButtons();
  
         }*/
+        if(isSubmenu && plants.GetBool("Play"))
+        {
+            if(adjustedTime > 0) adjustedTime -= Time.deltaTime;
+            else RevertTime();
+        }
     }
 
     public void ChangePanel(int index)
@@ -114,6 +137,48 @@ public class MenuManager : MonoBehaviour
                 player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + h, player.transform.position.z);                
             }      
         }
+    }
+
+    public void IncreaseSpeed()
+    {
+        if(timeSpeed < 2.0) timeSpeed = timeSpeed + 0.1;
+        speedText.text = "x " + timeSpeed.ToString();
+    }
+
+    public void DecreaseSpeed()
+    {
+        if(timeSpeed > 0.1f) timeSpeed = timeSpeed - 0.1;
+        speedText.text = "x " + timeSpeed.ToString();
+    }
+
+    public void IncreaseTime()
+    {
+        if (timePlants < 90) timePlants = timePlants + 1;
+        timeText.text = timePlants.ToString() + " Days";
+    }
+
+    public void DecreaseTime()
+    {
+        if (timePlants > 1) timePlants = timePlants - 1;
+        timeText.text = timePlants.ToString() + " Days";
+    }
+
+    public void SetTime()
+    {
+        adjustedTime = timePlants * timeAnimation / totalTime / Convert.ToSingle(timeSpeed);
+        Debug.Log("TIME: " + adjustedTime);
+        plants.speed = 1;
+        plants.SetBool("Play", true);
+        //Debug.Log("Booleano animación: " + plants.GetBool("Play"));
+        Time.timeScale = Convert.ToSingle(timeSpeed);
+    }
+
+    public void RevertTime()
+    {
+        //plants.SetBool("Play", false);
+        //timeSpeed = 1f;
+        plants.speed = 0;
+        Time.timeScale = 1;
     }
 
     #region Multiplayer Actions
