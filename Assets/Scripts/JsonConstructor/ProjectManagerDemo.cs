@@ -29,7 +29,6 @@ public class ProjectManagerDemo : MonoBehaviour
     //NetworkManager networkManager;
     FadeScreen fader;
     PlayerManager playerManager;
-    
     void Awake()
     {
         /*networkManager = GameObject.FindGameObjectWithTag("Network").GetComponent<NetworkManager>();

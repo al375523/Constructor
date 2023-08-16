@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Chiligames.MetaAvatarsPun;
 using static Chiligames.MetaAvatarsPun.NetworkManager;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -16,9 +17,9 @@ public class MenuManager : MonoBehaviour
     [HideInInspector] public float addedHeight;
 
     public bool isSubmenu;
-    public List<GameObject> panels;   
-    public GameObject actualPanel;    
-    public TMP_Text multiplayerText;        
+    public List<GameObject> panels;
+    public GameObject actualPanel;
+    public TMP_Text multiplayerText;
     [Tooltip("Room Options Buttons")]
     public List<GameObject> multiplayerButtons;
     [Tooltip("Give info about the actual state of the connection")]
@@ -34,9 +35,14 @@ public class MenuManager : MonoBehaviour
     public TMP_Text timeText;
 
     Animator plants;
+    public Animation anim;
     float timeAnimation;
     float totalTime;
     float adjustedTime;
+    bool play;
+    public GameObject pausePlay;
+    public Sprite playImage;
+    public Sprite pauseImage;
 
     // Start is called before the first frame update
     void Start()
@@ -45,20 +51,20 @@ public class MenuManager : MonoBehaviour
         actualPanel = panels[0];
         initialPosition = Vector3.zero;
         initialRotation = Quaternion.identity;
-        player = GameObject.FindGameObjectWithTag("Player");       
+        player = GameObject.FindGameObjectWithTag("Player");
         addedHeight = 0;
         totalTime = 90f;
+        play = false;
         if (isSubmenu)
         {
             plants = GameObject.FindGameObjectWithTag("Plant").GetComponent<Animator>();
             timeAnimation = plants.runtimeAnimatorController.animationClips[0].length;
             Debug.Log("TIME ANIMATION: " + timeAnimation);
-
         }
         //if (isSubmenu) networkManager = GameObject.FindGameObjectWithTag("Network").GetComponent<NetworkManager>();
         StartCoroutine(WaitSeconds());
     }
-    
+
     IEnumerator WaitSeconds()
     {
         yield return new WaitForSeconds(5f);
@@ -78,10 +84,10 @@ public class MenuManager : MonoBehaviour
             ShowButtons();
  
         }*/
-        if(isSubmenu && plants.GetBool("Play"))
+        if (isSubmenu && plants.GetBool("Play"))
         {
-            if(adjustedTime > 0) adjustedTime -= Time.deltaTime;
-            else RevertTime();
+            if (adjustedTime > 0) adjustedTime -= Time.deltaTime;
+            else SetTime();
         }
     }
 
@@ -90,7 +96,7 @@ public class MenuManager : MonoBehaviour
         actualPanel.SetActive(false);
         panels[index].SetActive(true);
         actualPanel = panels[index];
-    }   
+    }
 
     public void PlayScene(string name)
     {
@@ -99,21 +105,21 @@ public class MenuManager : MonoBehaviour
 
     public void ResetMenu()
     {
-        ChangePanel(0);      
-    }      
+        ChangePanel(0);
+    }
     public void ExitApp(bool v)
     {
         //Menu confirmacion
         if (v)
         {
             Application.Quit();
-        }              
+        }
     }
 
     public void VolumeUp()
     {
-        if(AudioListener.volume < 1)
-            AudioListener.volume += 0.1f;        
+        if (AudioListener.volume < 1)
+            AudioListener.volume += 0.1f;
     }
 
 
@@ -122,7 +128,7 @@ public class MenuManager : MonoBehaviour
         if (AudioListener.volume > 0)
             AudioListener.volume -= 0.1f;
     }
-    
+
     public void SetHeight(float h)
     {
         if (h == 0)
@@ -134,20 +140,20 @@ public class MenuManager : MonoBehaviour
             addedHeight += h;
             if (addedHeight > -1f && addedHeight < 1f)
             {
-                player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + h, player.transform.position.z);                
-            }      
+                player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + h, player.transform.position.z);
+            }
         }
     }
 
     public void IncreaseSpeed()
     {
-        if(timeSpeed < 2.0) timeSpeed = timeSpeed + 0.1;
+        if (timeSpeed < 2.0) timeSpeed = timeSpeed + 0.1;
         speedText.text = "x " + timeSpeed.ToString();
     }
 
     public void DecreaseSpeed()
     {
-        if(timeSpeed > 0.1f) timeSpeed = timeSpeed - 0.1;
+        if (timeSpeed > 0.1f) timeSpeed = timeSpeed - 0.1;
         speedText.text = "x " + timeSpeed.ToString();
     }
 
@@ -163,22 +169,37 @@ public class MenuManager : MonoBehaviour
         timeText.text = timePlants.ToString() + " Days";
     }
 
-    public void SetTime()
+    public void Forward()
     {
-        adjustedTime = timePlants * timeAnimation / totalTime / Convert.ToSingle(timeSpeed);
-        Debug.Log("TIME: " + adjustedTime);
-        plants.speed = 1;
-        plants.SetBool("Play", true);
-        //Debug.Log("Booleano animación: " + plants.GetBool("Play"));
-        Time.timeScale = Convert.ToSingle(timeSpeed);
+        adjustedTime = 0f;
     }
 
-    public void RevertTime()
+    public void Backward()
     {
-        //plants.SetBool("Play", false);
-        //timeSpeed = 1f;
-        plants.speed = 0;
-        Time.timeScale = 1;
+        adjustedTime = timePlants * timeAnimation / totalTime / Convert.ToSingle(timeSpeed);
+    }
+
+    public void SetTime()
+    {
+        play = !play;
+        if (play)
+        {
+            pausePlay.GetComponent<Image>().sprite = pauseImage;
+            adjustedTime = timePlants * timeAnimation / totalTime / Convert.ToSingle(timeSpeed);
+            Debug.Log("TIME: " + adjustedTime);
+            plants.speed = 1;
+            plants.SetBool("Play", true);
+            Time.timeScale = Convert.ToSingle(timeSpeed);
+        }
+        else
+        {
+            pausePlay.GetComponent<Image>().sprite = playImage;
+            plants.SetBool("Play", false);
+            //timeSpeed = 1f;
+            plants.speed = 0;
+            Time.timeScale = 1;
+        }
+        
     }
 
     #region Multiplayer Actions

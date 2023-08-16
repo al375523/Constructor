@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_HojasRamas
+  m_Shader: {fileID: -6465566751694194690, guid: 25c451f48e31fe24c844949ec383fd34, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlbedoMap:
+        m_Texture: {fileID: 2800000, guid: c636b87a8af8e99419316dd9c2faefb1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AmbientOcclusionMap:
+        m_Texture: {fileID: 2800000, guid: aaba0034954426c4aa22f1423e984b91, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Plane_01:
+        m_Texture: {fileID: 2800000, guid: 0eb5505a82b504f489533e0a6c0cee14, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Plane_02:
+        m_Texture: {fileID: 2800000, guid: f8d9c4aa0b587a5469617bcc2f40fa5d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Plane_03:
+        m_Texture: {fileID: 2800000, guid: de29ef6cdeb47ef48b9cc0fb58909c67, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Plane_04:
+        m_Texture: {fileID: 2800000, guid: 7a92feea13986b34bb68a1ec852479c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Plane_05:
+        m_Texture: {fileID: 2800000, guid: ba74ad164e0e9414f947e8a45a5b1961, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Plane_06:
+        m_Texture: {fileID: 2800000, guid: 0bc146bf28d069d46a1bba0ec6690768, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Plane_07:
+        m_Texture: {fileID: 2800000, guid: 4bd7f0ad16527bc4d8ea5dad262a723b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Plane_08:
+        m_Texture: {fileID: 2800000, guid: 0d0dde3bbcf4f814bb2dcbf36c34e176, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Plane_09:
+        m_Texture: {fileID: 2800000, guid: 07cf72f7b058c1b4893a043b3ceb7fd5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Plane_10:
+        m_Texture: {fileID: 2800000, guid: b87188982dd4284449a6aa169d6fbd7c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: b0c8ba07235f7b849ad1fe097b551a30, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Opacity:
+        m_Texture: {fileID: 2800000, guid: 6eeae1372537b6441a7a46745eafaf60, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _EscalaRuido: 0
+    - _FuerzaBend: 0.05
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Velocidad: 0.1
+    m_Colors:
+    - _Direccion: {r: 0.05, g: 0.05, b: 0, a: 0}
+    - _Plane_01_Offset: {r: -3.83, g: -0.46, b: 0, a: 0}
+    - _Plane_01_Tiling: {r: 0.75, g: 0.75, b: 0, a: 0}
+    - _Plane_02_Offset: {r: -4.015, g: -0.46, b: 0, a: 0}
+    - _Plane_02_Tiling: {r: 0.75, g: 0.75, b: 0, a: 0}
+    - _Plane_03_Offset: {r: -4.21, g: -0.46, b: 0, a: 0}
+    - _Plane_03_Tiling: {r: 0.75, g: 0.75, b: 0, a: 0}
+    - _Plane_04_Offset: {r: -4.399, g: -0.46, b: 0, a: 0}
+    - _Plane_04_Tiling: {r: 0.75, g: 0.75, b: 0, a: 0}
+    - _Plane_05_Offset: {r: -2.829, g: -0.2, b: 0, a: 0}
+    - _Plane_05_Tiling: {r: 0.75, g: 0.75, b: 0, a: 0}
+    - _Plane_06_Offset: {r: -3.315, g: -0.2, b: 0, a: 0}
+    - _Plane_06_Tiling: {r: 0.55, g: 0.55, b: 0, a: 0}
+    - _Plane_07_Offset: {r: -3.48, g: -0.2, b: 0, a: 0}
+    - _Plane_07_Tiling: {r: 0.55, g: 0.55, b: 0, a: 0}
+    - _Plane_08_Offset: {r: -3.236, g: -0.02, b: 0, a: 0}
+    - _Plane_08_Tiling: {r: 0.55, g: 0.55, b: 0, a: 0}
+    - _Plane_09_Offset: {r: -3.4, g: -0.02, b: 0, a: 0}
+    - _Plane_09_Tiling: {r: 0.55, g: 0.55, b: 0, a: 0}
+    - _Plane_10_Offset: {r: -3.56, g: -0.02, b: 0, a: 0}
+    - _Plane_10_Tiling: {r: 0.55, g: 0.55, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &1513175909863858562
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

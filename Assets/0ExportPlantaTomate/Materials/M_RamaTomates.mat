@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_RamaTomates
+  m_Shader: {fileID: -6465566751694194690, guid: 778507e1b52dcf64daba6a78f09448c9, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MascaraRamaPrincipal:
+        m_Texture: {fileID: 2800000, guid: 8e45e329494a9a749ba3f0d79872d0f0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraRamoTomates_01:
+        m_Texture: {fileID: 2800000, guid: c64b1cdf959933b409fc96d2a07a1a01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraRamoTomates_02:
+        m_Texture: {fileID: 2800000, guid: 810def8309b5f824eacb93ff164c4adb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraRamoTomates_03:
+        m_Texture: {fileID: 2800000, guid: 6743bff954165e048b10ded5415c4404, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraRamoTomates_04:
+        m_Texture: {fileID: 2800000, guid: af4b4acbe21072b4d863824616bd7f75, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraRamoTomates_05:
+        m_Texture: {fileID: 2800000, guid: 2e1bc0620276b234db9745c07de9f7a9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraRamoTomates_06:
+        m_Texture: {fileID: 2800000, guid: d81ae87706ba45b4a80f923022c6c1e6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraRamoTomates_07:
+        m_Texture: {fileID: 2800000, guid: 60652788ef08fb842bb34a2c4c54c51f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraRamoTomates_08:
+        m_Texture: {fileID: 2800000, guid: 83ab86cc8265fc94f8b8756d4530a02c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TexturaAmarilla:
+        m_Texture: {fileID: 2800000, guid: 7388c0e836eb9c64bb1052ae5c783aaa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TexturaRoja:
+        m_Texture: {fileID: 2800000, guid: 0f980559aad31b74fab2cf0585faff99, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TexturaVerde:
+        m_Texture: {fileID: 2800000, guid: aac722288db7c514fad994d22e27f4be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Textura_AO:
+        m_Texture: {fileID: 2800000, guid: 84ecd4474d655144c920b272b7685b7d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Textura_N:
+        m_Texture: {fileID: 2800000, guid: 344d3869d46fdba449b7cdac03285ecd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AnchuraLineaEntorno: 0.95
+    - _FuerzaBend: 0.05
+    - _MaduracionRamo_01: 1
+    - _MaduracionRamo_02: 1
+    - _MaduracionRamo_03: 1
+    - _MaduracionRamo_04: 1
+    - _MaduracionRamo_05: 1
+    - _MaduracionRamo_06: 1
+    - _MaduracionRamo_07: 1
+    - _MaduracionRamo_08: 1
+    - _Outline: 1
+    - _OutlineBoolRamo_01: 0
+    - _OutlineBoolRamo_02: 0
+    - _OutlineBoolRamo_03: 0
+    - _OutlineBoolRamo_04: 0
+    - _OutlineBoolRamo_05: 0
+    - _OutlineBoolRamo_06: 0
+    - _OutlineBoolRamo_07: 0
+    - _OutlineBoolRamo_08: 0
+    - _PowerFresnel_Linea: 0.1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Velocidad: 0.1
+    m_Colors:
+    - _ColorOutline_Ramo_01: {r: 191, g: 0, b: 8, a: 255}
+    - _ColorOutline_Ramo_02: {r: 191, g: 0, b: 8, a: 255}
+    - _ColorOutline_Ramo_03: {r: 191, g: 0, b: 8, a: 255}
+    - _ColorOutline_Ramo_04: {r: 191, g: 0, b: 8, a: 255}
+    - _ColorOutline_Ramo_05: {r: 191, g: 0, b: 8, a: 255}
+    - _ColorOutline_Ramo_06: {r: 191, g: 0, b: 8, a: 255}
+    - _ColorOutline_Ramo_07: {r: 191, g: 0, b: 8, a: 255}
+    - _ColorOutline_Ramo_08: {r: 191, g: 0, b: 8, a: 255}
+    - _Direccion: {r: 0.05, g: 0.05, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &1513175909863858562
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
