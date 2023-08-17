@@ -171,12 +171,14 @@ public class MenuManager : MonoBehaviour
 
     public void Forward()
     {
+        plants.Play("Anim_61", -1, 1f);
         adjustedTime = 0f;
     }
 
     public void Backward()
     {
-        adjustedTime = timePlants * timeAnimation / totalTime / Convert.ToSingle(timeSpeed);
+        plants.Play("Anim_61", -1, 0f);
+        adjustedTime = timePlants * timeAnimation / totalTime / Convert.ToSingle(timeSpeed);     
     }
 
     public void SetTime()
