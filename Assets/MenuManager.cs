@@ -1,13 +1,8 @@
-using Photon.Pun;
-using Photon.Realtime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using Chiligames.MetaAvatarsPun;
-using static Chiligames.MetaAvatarsPun.NetworkManager;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
@@ -27,39 +22,50 @@ public class MenuManager : MonoBehaviour
     public TMP_Text infoText;
     GameObject player;
     ProjectManagerDemo projectManager;
+    LightningManager lightningManager;
     //NetworkManager networkManager;
 
     public double timeSpeed;
     public float timePlants;
+    public float timeHour;
     public TMP_Text speedText;
+    public TMP_Text dayText;
     public TMP_Text timeText;
 
     Animator plants;
-    public Animation anim;
+    public bool night;
     float timeAnimation;
     float totalTime;
     float adjustedTime;
-    bool play;
+    public float auxTime;
+    public bool play;
     public GameObject pausePlay;
     public Sprite playImage;
     public Sprite pauseImage;
 
+    
     // Start is called before the first frame update
     void Start()
     {
         projectManager = FindObjectOfType<ProjectManagerDemo>();
+        lightningManager = FindObjectOfType<LightningManager>();
         actualPanel = panels[0];
         initialPosition = Vector3.zero;
         initialRotation = Quaternion.identity;
         player = GameObject.FindGameObjectWithTag("Player");
         addedHeight = 0;
         totalTime = 90f;
+        timePlants = 4;
+        timeHour = 12;
+        timeText.text = timeHour.ToString() + ":00";
+        dayText.text = timePlants.ToString() + " Days";
+        speedText.text = "x " + timeSpeed.ToString();
         play = false;
+        night = true;
         if (isSubmenu)
         {
             plants = GameObject.FindGameObjectWithTag("Plant").GetComponent<Animator>();
             timeAnimation = plants.runtimeAnimatorController.animationClips[0].length;
-            Debug.Log("TIME ANIMATION: " + timeAnimation);
         }
         //if (isSubmenu) networkManager = GameObject.FindGameObjectWithTag("Network").GetComponent<NetworkManager>();
         StartCoroutine(WaitSeconds());
@@ -79,13 +85,10 @@ public class MenuManager : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, transform.position.z);
         }
-        /*if (isSubmenu)
-        {            
-            ShowButtons();
- 
-        }*/
+        
         if (isSubmenu && plants.GetBool("Play"))
         {
+            Debug.Log("Adjusted Time: " + adjustedTime);
             if (adjustedTime > 0) adjustedTime -= Time.deltaTime;
             else SetTime();
         }
@@ -157,16 +160,33 @@ public class MenuManager : MonoBehaviour
         speedText.text = "x " + timeSpeed.ToString();
     }
 
+    public void IncreaseDays() 
+    { 
+        if (timePlants < 90) timePlants = timePlants + 1;
+        dayText.text = timePlants.ToString() + " Days";
+    }
+
+    public void DecreaseDays()
+    {
+        if (timePlants > 1) timePlants = timePlants - 1;
+        dayText.text = timePlants.ToString() + " Days";
+    }
     public void IncreaseTime()
     {
-        if (timePlants < 90) timePlants = timePlants + 1;
-        timeText.text = timePlants.ToString() + " Days";
+        if (timeHour == 23) timeHour = 0;
+        else timeHour++;
+
+        timeText.text = timeHour + ":00";
+        lightningManager.ChangeSunPosition();
     }
 
     public void DecreaseTime()
     {
-        if (timePlants > 1) timePlants = timePlants - 1;
-        timeText.text = timePlants.ToString() + " Days";
+        if (timeHour == 0) timeHour = 23;
+        else timeHour--;
+
+        timeText.text = timeHour + ":00";
+        lightningManager.ChangeSunPosition();
     }
 
     public void Forward()
@@ -188,7 +208,8 @@ public class MenuManager : MonoBehaviour
         {
             pausePlay.GetComponent<Image>().sprite = pauseImage;
             adjustedTime = timePlants * timeAnimation / totalTime / Convert.ToSingle(timeSpeed);
-            Debug.Log("TIME: " + adjustedTime);
+            auxTime = adjustedTime;
+            lightningManager.CalculateSpeed();
             plants.speed = 1;
             plants.SetBool("Play", true);
             Time.timeScale = Convert.ToSingle(timeSpeed);
@@ -201,7 +222,6 @@ public class MenuManager : MonoBehaviour
             plants.speed = 0;
             Time.timeScale = 1;
         }
-        
     }
 
     #region Multiplayer Actions
