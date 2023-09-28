@@ -18745,7 +18745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -18753,7 +18753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -18762,7 +18762,7 @@ PrefabInstance:
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1945563345}
+      objectReference: {fileID: 1101194013}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -18777,7 +18777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PointerHitted
+      value: ShowHideUI
       objectReference: {fileID: 0}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -18785,7 +18785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: MinimapController, Assembly-CSharp
+      value: OculusInputs, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -18802,7 +18802,7 @@ PrefabInstance:
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 72119830}
+      objectReference: {fileID: 0}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: 
@@ -18813,7 +18813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2253068305295538444, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2470930291764872478, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: m_Name
@@ -18833,7 +18833,7 @@ PrefabInstance:
       objectReference: {fileID: 309676406}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -18841,7 +18841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -18850,7 +18850,7 @@ PrefabInstance:
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1945563345}
+      objectReference: {fileID: 1101194013}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -18865,7 +18865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PointerHitted
+      value: ShowHideUI
       objectReference: {fileID: 0}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -18873,7 +18873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: MinimapController, Assembly-CSharp
+      value: OculusInputs, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -18890,7 +18890,7 @@ PrefabInstance:
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1137726448}
+      objectReference: {fileID: 0}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: 
@@ -18901,7 +18901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4676166160786609414, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4781846517708003336, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: refCurves.Array.data[0]
@@ -18913,7 +18913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -18921,7 +18921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -18930,7 +18930,7 @@ PrefabInstance:
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1945563345}
+      objectReference: {fileID: 1101194013}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -18945,7 +18945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PointerHitted
+      value: ShowHideUI
       objectReference: {fileID: 0}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -18953,7 +18953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: MinimapController, Assembly-CSharp
+      value: OculusInputs, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -18970,7 +18970,7 @@ PrefabInstance:
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1135036338}
+      objectReference: {fileID: 0}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: 
@@ -18981,11 +18981,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5126308296242200503, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -18997,7 +18997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -19010,7 +19010,7 @@ PrefabInstance:
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1945563345}
+      objectReference: {fileID: 1101194013}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -19025,7 +19025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: ChangeSection
+      value: ShowHideUI
       objectReference: {fileID: 0}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -19037,7 +19037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: MinimapController, Assembly-CSharp
+      value: OculusInputs, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -19061,7 +19061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: LVB_PART_01
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6127417034478038122, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -19121,7 +19121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -19129,7 +19129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -19138,7 +19138,7 @@ PrefabInstance:
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1945563345}
+      objectReference: {fileID: 1101194013}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -19153,7 +19153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PointerHitted
+      value: ShowHideUI
       objectReference: {fileID: 0}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -19161,7 +19161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: MinimapController, Assembly-CSharp
+      value: OculusInputs, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -19178,7 +19178,7 @@ PrefabInstance:
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1307078453}
+      objectReference: {fileID: 0}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: 
@@ -19189,11 +19189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334200822147987846, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -19201,7 +19201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -19210,7 +19210,7 @@ PrefabInstance:
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1945563345}
+      objectReference: {fileID: 1101194013}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -19225,7 +19225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PointerHitted
+      value: ShowHideUI
       objectReference: {fileID: 0}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -19233,7 +19233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: MinimapController, Assembly-CSharp
+      value: OculusInputs, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -19250,7 +19250,7 @@ PrefabInstance:
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 396927204}
+      objectReference: {fileID: 0}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: 
@@ -19261,7 +19261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8373296684019913832, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
       propertyPath: proximityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b1f2ab77c39b384a822f9a534c15964, type: 3}
