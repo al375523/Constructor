@@ -20,6 +20,7 @@ public class MinimapController : MonoBehaviour
     public string actualSection = "";
     ProjectManagerDemo projectManager;
 
+    MenuManager menuManager;
     PlayerManager playerManager;
     PhotonView pv;
     OculusInputs inputSytem;
@@ -71,7 +72,7 @@ public class MinimapController : MonoBehaviour
         }      
         if (actualSection != name)
         {    
-            StartCoroutine(WaitToScene(name));                     
+            StartCoroutine(WaitToScene(name));     
         }
        
         else

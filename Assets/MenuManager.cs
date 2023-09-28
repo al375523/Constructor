@@ -32,7 +32,7 @@ public class MenuManager : MonoBehaviour
     public TMP_Text dayText;
     public TMP_Text timeText;
 
-    Animator plants;
+    public Animator plants;
     public bool night;
     float timeAnimation;
     float totalTime;
@@ -57,9 +57,9 @@ public class MenuManager : MonoBehaviour
         totalTime = 90f;
         timePlants = 4;
         timeHour = 12;
-        timeText.text = timeHour.ToString() + ":00";
+        /*timeText.text = timeHour.ToString() + ":00";
         dayText.text = timePlants.ToString() + " Days";
-        speedText.text = "x " + timeSpeed.ToString();
+        speedText.text = "x " + timeSpeed.ToString();*/
         play = false;
         night = true;
         if (isSubmenu)
@@ -80,15 +80,14 @@ public class MenuManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         if (name.Contains("Main"))
         {
             transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, transform.position.z);
         }
         
-        if (isSubmenu && plants.GetBool("Play"))
+        if (isSubmenu && plants != null && plants.GetBool("Play"))
         {
-            Debug.Log("Adjusted Time: " + adjustedTime);
             if (adjustedTime > 0) adjustedTime -= Time.deltaTime;
             else SetTime();
         }
@@ -169,7 +168,9 @@ public class MenuManager : MonoBehaviour
     public void DecreaseDays()
     {
         if (timePlants > 1) timePlants = timePlants - 1;
-        dayText.text = timePlants.ToString() + " Days";
+
+        if(timePlants != 1) dayText.text = timePlants.ToString() + " Days";
+        else dayText.text = timePlants.ToString() + " Day";
     }
     public void IncreaseTime()
     {

@@ -80,7 +80,7 @@ public class LightningManager : MonoBehaviour
         float actualHour = 360f * menuManager.timeHour / 24;
         sun.transform.position = initialPosition;
         sun.transform.RotateAround(point, axis, actualHour);
-
+  
         normalizedY = Mathf.InverseLerp(minY, maxY, sun.transform.position.y);
         targetExposure = Mathf.Lerp(minExposure, maxExposure, normalizedY);
 
